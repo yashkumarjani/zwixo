@@ -17,13 +17,31 @@ export const metadata: Metadata = {
   description: "Snap it. Glow it. Deliver it. We restore, edit, and curate your real photos, family moments, and celebrations with hand-curated artistry in Ahmedabad, Gujarat.",
   keywords: ["Zwixo", "photo restoration", "wedding countdown posters", "baby milestone cards", "creative edit", "wedding website", "Ahmedabad studio"],
   authors: [{ name: "Yash & Gautami" }],
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+  },
   openGraph: {
     title: "ZWIXO | Memory & Celebration Studio",
     description: "Real Photos. Real Memories. Real Emotions. Order wedding countdowns, baby milestone cards, and photo restorations in 30 seconds via WhatsApp.",
-    url: "https://zwixo.com",
+    url: "https://zwixo-memory-studio.netlify.app",
     siteName: "ZWIXO",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "https://zwixo-memory-studio.netlify.app/images/logo_preview.png",
+        width: 1200,
+        height: 630,
+        alt: "ZWIXO Memory Studio Preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ZWIXO | Memory & Celebration Studio",
+    description: "Real Photos. Real Memories. Real Emotions. Order wedding countdowns, baby milestone cards, and photo restorations in 30 seconds via WhatsApp.",
+    images: ["https://zwixo-memory-studio.netlify.app/images/logo_preview.png"],
   },
 };
 
