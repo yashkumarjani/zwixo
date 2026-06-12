@@ -24,15 +24,15 @@ const SHOWCASE_ITEMS: ShowcaseExample[] = [
   },
   {
     title: "Celebration posters",
-    beforeImg: "/images/wedding_before.png",
-    afterImg: "/images/wedding_after.png",
+    beforeImg: "/images/beforeWedding.JPG",
+    afterImg: "/images/afterWedding.PNG",
     beforeLabel: "Raw Photo",
     afterLabel: "Arch Poster"
   },
   {
     title: "Milestone cards",
-    beforeImg: "/images/baby_before.png",
-    afterImg: "/images/baby_after.png",
+    beforeImg: "/images/beforeBaby.JPG",
+    afterImg: "/images/afterBaby.PNG",
     beforeLabel: "Raw Photo",
     afterLabel: "Milestone"
   }
