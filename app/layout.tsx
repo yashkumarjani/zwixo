@@ -46,6 +46,7 @@ export const metadata: Metadata = {
 };
 
 import { LazyMotion, domAnimation } from "framer-motion";
+import LoaderWrapper from "../components/LoaderWrapper";
 
 export interface RootLayoutProps {
   children: React.ReactNode;
@@ -63,7 +64,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
         </a>
         <SmoothScroll>
           <LazyMotion features={domAnimation} strict>
-            {children}
+            <LoaderWrapper>
+              {children}
+            </LoaderWrapper>
           </LazyMotion>
         </SmoothScroll>
       </body>

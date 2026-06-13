@@ -1,0 +1,182 @@
+// FILE: components/Loader.tsx
+"use client";
+
+import React, { useEffect, useState } from "react";
+import { m, useReducedMotion } from "framer-motion";
+
+export default function Loader({ onComplete }: { onComplete: () => void }) {
+  const shouldReduceMotion = useReducedMotion();
+  const [isMobile, setIsMobile] = useState(() => {
+    if (typeof window !== "undefined") {
+      return window.innerWidth < 768;
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    // Prevent scrolling while loader is active
+    document.body.style.overflow = "hidden";
+    
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
+    
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  // Center shifting offsets: 96px on desktop and 64px on mobile
+  const logoX = isMobile ? -64 : -96;
+  const textWidth = isMobile ? 160 : 250;
+
+  // Animation timeline configuration using a modern 2.0-second total duration (2026 performance trend)
+  const logoVariants = {
+    initial: { scale: shouldReduceMotion ? 1 : 0.85, opacity: 0, x: shouldReduceMotion ? logoX : 0 },
+    animate: {
+      scale: 1,
+      opacity: 1,
+      x: logoX,
+    },
+  };
+
+  const logoTransition = shouldReduceMotion
+    ? { duration: 0.4, ease: "easeOut" as const }
+    : {
+        scale: { duration: 0.5, ease: "easeOut" as const },
+        opacity: { duration: 0.5, ease: "easeOut" as const },
+        x: { duration: 0.6, delay: 0.7, ease: "easeInOut" as const },
+      };
+
+  const textContainerVariants = {
+    initial: { width: shouldReduceMotion ? textWidth : 0, opacity: 0 },
+    animate: {
+      width: textWidth,
+      opacity: 1,
+    },
+  };
+
+  const textContainerTransition = shouldReduceMotion
+    ? { duration: 0.4, delay: 0.1, ease: "easeOut" as const }
+    : {
+        width: { duration: 0.6, delay: 0.7, ease: "easeInOut" as const },
+        opacity: { duration: 0.6, delay: 0.7, ease: "easeInOut" as const },
+      };
+
+  const textSpanVariants = {
+    initial: { x: shouldReduceMotion ? 0 : -15 },
+    animate: {
+      x: 0,
+    },
+  };
+
+  const textSpanTransition = shouldReduceMotion
+    ? { duration: 0 }
+    : {
+        duration: 0.6,
+        delay: 0.7,
+        ease: "easeOut" as const,
+      };
+
+  // Tagline starts after logo and wordmark are fully static at t = 1.3s
+  const taglineVariants = {
+    initial: { opacity: 0, y: shouldReduceMotion ? 0 : -18 },
+    animate: {
+      opacity: 0.6,
+      y: 0,
+    },
+  };
+
+  const taglineTransition = shouldReduceMotion
+    ? { duration: 0.4, delay: 0.3, ease: "easeOut" as const }
+    : {
+        duration: 0.7,
+        delay: 1.3,
+        ease: "easeOut" as const,
+      };
+
+  return (
+    <m.div
+      initial={{ opacity: 1 }}
+      exit={{ opacity: 0, y: shouldReduceMotion ? 0 : -20 }}
+      transition={{ duration: 0.45, ease: "easeInOut" }}
+      data-lenis-prevent
+      role="status"
+      aria-busy="true"
+      aria-label="Loading ZWIXO Memory Studio"
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-[var(--background)] select-none pointer-events-auto"
+    >
+      {/* Premium background radial glow matching logo_preview.svg */}
+      {!shouldReduceMotion && (
+        <div className="absolute w-[320px] h-[320px] md:w-[480px] md:h-[480px] rounded-full bg-[#F5A623] opacity-[0.06] dark:opacity-[0.09] blur-[80px] md:blur-[100px] pointer-events-none" />
+      )}
+
+      <div className="relative flex flex-col items-center justify-center z-10">
+        {/* Logo + ZWIXO Row */}
+        <div className="relative flex items-center justify-center h-[76px] w-[320px] md:w-[480px] z-20">
+          <m.div
+            variants={logoVariants}
+            initial="initial"
+            animate="animate"
+            transition={logoTransition}
+            className="z-30 flex items-center justify-center w-[60px] h-[60px] md:w-[76px] md:h-[76px] drop-shadow-[0_4px_12px_rgba(0,0,0,0.06)]"
+            style={{ willChange: "transform, opacity" }}
+          >
+            {/* Inline SVG Z Icon matching the brand system */}
+            <svg
+              viewBox="0 0 76 76"
+              className="w-full h-full"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <rect width="76" height="76" rx="18" fill="#1C1C1E" />
+              <rect x="14" y="16" width="48" height="10" rx="5" fill="#F5A623" />
+              <polygon points="52,26 62,26 24,50 14,50" fill="#F5A623" />
+              <rect x="14" y="50" width="48" height="10" rx="5" fill="#F5A623" />
+              <rect x="50" y="54" width="12" height="8" rx="2" fill="#1C1C1E" />
+              <polygon points="50,56 68,58 50,60" fill="#1C1C1E" />
+            </svg>
+          </m.div>
+
+          <m.div
+            variants={textContainerVariants}
+            initial="initial"
+            animate="animate"
+            transition={textContainerTransition}
+            className="absolute left-[calc(50%-24px)] md:left-[calc(50%-46px)] overflow-hidden whitespace-nowrap z-20 flex items-center"
+            style={{ height: "100%", opacity: 0, willChange: "width, opacity" }}
+          >
+            <m.span
+              variants={textSpanVariants}
+              initial="initial"
+              animate="animate"
+              transition={textSpanTransition}
+              className="font-sans font-bold text-4xl md:text-5xl tracking-widest text-[var(--foreground)] drop-shadow-[0_0_12px_rgba(245,166,35,0.25)] block whitespace-nowrap"
+              style={{ fontFamily: "var(--font-sans)", willChange: "transform" }}
+            >
+              ZWI<span className="text-[#F5A623]">X</span>O
+            </m.span>
+          </m.div>
+        </div>
+
+        {/* Tagline container with overflow-hidden to clip it while behind the logo row */}
+        <div className="overflow-hidden mt-2 z-10 py-1">
+          <m.div
+            variants={taglineVariants}
+            initial="initial"
+            animate="animate"
+            transition={taglineTransition}
+            onAnimationComplete={onComplete}
+            className="text-center text-xs md:text-sm tracking-[0.2em] font-light text-[var(--foreground)] uppercase"
+            style={{ fontFamily: "var(--font-sans)", opacity: 0, willChange: "transform, opacity" }}
+          >
+            snap it · glow it · deliver it
+          </m.div>
+        </div>
+      </div>
+    </m.div>
+  );
+}
