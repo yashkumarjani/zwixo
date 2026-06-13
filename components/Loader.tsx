@@ -15,7 +15,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
     };
   }, []);
 
-  // Animation timeline configuration scaled to a 5.0-second total duration (for visual inspection)
+  // Animation timeline configuration (3.5s animation sequence with a 1.0s static hold, total 4.5s screen time)
   const logoVariants = {
     initial: { scale: shouldReduceMotion ? 1 : 0.85, opacity: 0, x: shouldReduceMotion ? "var(--logo-x)" : 0 },
     animate: {
@@ -26,11 +26,11 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
   };
 
   const logoTransition = shouldReduceMotion
-    ? { duration: 1.0, ease: "easeOut" as const }
+    ? { duration: 0.7, ease: "easeOut" as const }
     : {
-        scale: { duration: 1.25, ease: "easeOut" as const },
-        opacity: { duration: 1.25, ease: "easeOut" as const },
-        x: { duration: 1.5, delay: 1.75, ease: "easeInOut" as const },
+        scale: { duration: 0.8, ease: "easeOut" as const },
+        opacity: { duration: 0.8, ease: "easeOut" as const },
+        x: { duration: 1.0, delay: 1.2, ease: "easeInOut" as const },
       };
 
   const textContainerVariants = {
@@ -42,10 +42,10 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
   };
 
   const textContainerTransition = shouldReduceMotion
-    ? { duration: 1.0, delay: 0.25, ease: "easeOut" as const }
+    ? { duration: 0.7, delay: 0.15, ease: "easeOut" as const }
     : {
-        width: { duration: 1.5, delay: 1.75, ease: "easeInOut" as const },
-        opacity: { duration: 1.5, delay: 1.75, ease: "easeInOut" as const },
+        width: { duration: 1.0, delay: 1.2, ease: "easeInOut" as const },
+        opacity: { duration: 1.0, delay: 1.2, ease: "easeInOut" as const },
       };
 
   const textSpanVariants = {
@@ -58,25 +58,32 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
   const textSpanTransition = shouldReduceMotion
     ? { duration: 0 }
     : {
-        duration: 1.5,
-        delay: 1.75,
+        duration: 1.0,
+        delay: 1.2,
         ease: "easeOut" as const,
       };
 
-  // Tagline starts after logo and wordmark are fully static at t = 3.25s
+  // Tagline starts after logo and wordmark are fully static at t = 2.2s
+  // Animation takes 2.3s total (1.3s transition + 1.0s static hold to reach 4.5s total screen time)
   const taglineVariants = {
     initial: { opacity: 0, y: shouldReduceMotion ? 0 : -18 },
     animate: {
-      opacity: 0.6,
-      y: 0,
+      opacity: shouldReduceMotion ? 0.6 : [0, 0.6, 0.6],
+      y: shouldReduceMotion ? 0 : [-18, 0, 0],
     },
   };
 
   const taglineTransition = shouldReduceMotion
-    ? { duration: 1.0, delay: 0.75, ease: "easeOut" as const }
+    ? {
+        times: [0, 0.41, 1],
+        duration: 1.7,
+        delay: 0.5,
+        ease: "easeOut" as const,
+      }
     : {
-        duration: 1.75,
-        delay: 3.25,
+        times: [0, 0.565, 1],
+        duration: 2.3,
+        delay: 2.2,
         ease: "easeOut" as const,
       };
 
@@ -154,7 +161,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
               initial="initial"
               animate="animate"
               transition={textSpanTransition}
-              className="font-sans font-bold text-4xl md:text-5xl tracking-widest text-[var(--foreground)] drop-shadow-[0_0_12px_rgba(245,166,35,0.25)] block whitespace-nowrap"
+              className="font-sans font-black text-4xl md:text-5xl -tracking-[0.04em] text-[var(--foreground)] drop-shadow-[0_0_12px_rgba(245,166,35,0.25)] block whitespace-nowrap"
               style={{ fontFamily: "var(--font-sans)", willChange: "transform" }}
             >
               ZWI<span className="text-[#F5A623]">X</span>O
