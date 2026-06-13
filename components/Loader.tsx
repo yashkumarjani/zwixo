@@ -1,44 +1,27 @@
 // FILE: components/Loader.tsx
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { m, useReducedMotion } from "framer-motion";
 
 export default function Loader({ onComplete }: { onComplete: () => void }) {
   const shouldReduceMotion = useReducedMotion();
-  const [isMobile, setIsMobile] = useState(() => {
-    if (typeof window !== "undefined") {
-      return window.innerWidth < 768;
-    }
-    return false;
-  });
 
   useEffect(() => {
     // Prevent scrolling while loader is active
     document.body.style.overflow = "hidden";
-    
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    window.addEventListener("resize", handleResize);
-    
     return () => {
       document.body.style.overflow = "";
-      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  // Center shifting offsets: 96px on desktop and 64px on mobile
-  const logoX = isMobile ? -64 : -96;
-  const textWidth = isMobile ? 160 : 250;
-
   // Animation timeline configuration using a modern 2.0-second total duration (2026 performance trend)
   const logoVariants = {
-    initial: { scale: shouldReduceMotion ? 1 : 0.85, opacity: 0, x: shouldReduceMotion ? logoX : 0 },
+    initial: { scale: shouldReduceMotion ? 1 : 0.85, opacity: 0, x: shouldReduceMotion ? "var(--logo-x)" : 0 },
     animate: {
       scale: 1,
       opacity: 1,
-      x: logoX,
+      x: "var(--logo-x)",
     },
   };
 
@@ -51,9 +34,9 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
       };
 
   const textContainerVariants = {
-    initial: { width: shouldReduceMotion ? textWidth : 0, opacity: 0 },
+    initial: { width: shouldReduceMotion ? "var(--text-width)" : 0, opacity: 0 },
     animate: {
-      width: textWidth,
+      width: "var(--text-width)",
       opacity: 1,
     },
   };
@@ -108,10 +91,27 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
       aria-label="Loading ZWIXO Memory Studio"
       className="fixed inset-0 z-[9999] flex items-center justify-center bg-[var(--background)] select-none pointer-events-auto"
     >
+      {/* Scoped CSS variables for responsive offsets to prevent SSR/Hydration mismatches */}
+      <style>{`
+        :root {
+          --logo-x: -96px;
+          --text-width: 250px;
+          --text-left: calc(50% - 46px);
+        }
+        @media (max-width: 767px) {
+          :root {
+            --logo-x: -64px;
+            --text-width: 160px;
+            --text-left: calc(50% - 24px);
+          }
+        }
+      `}</style>
+
       {/* Premium background radial glow matching logo_preview.svg */}
-      {!shouldReduceMotion && (
-        <div className="absolute w-[320px] h-[320px] md:w-[480px] md:h-[480px] rounded-full bg-[#F5A623] opacity-[0.06] dark:opacity-[0.09] blur-[80px] md:blur-[100px] pointer-events-none" />
-      )}
+      <div 
+        className="absolute w-[320px] h-[320px] md:w-[480px] md:h-[480px] rounded-full bg-[#F5A623] opacity-[0.06] dark:opacity-[0.09] blur-[80px] md:blur-[100px] pointer-events-none" 
+        style={{ opacity: shouldReduceMotion ? 0 : undefined }}
+      />
 
       <div className="relative flex flex-col items-center justify-center z-10">
         {/* Logo + ZWIXO Row */}
@@ -146,8 +146,8 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
             initial="initial"
             animate="animate"
             transition={textContainerTransition}
-            className="absolute left-[calc(50%-24px)] md:left-[calc(50%-46px)] overflow-hidden whitespace-nowrap z-20 flex items-center"
-            style={{ height: "100%", opacity: 0, willChange: "width, opacity" }}
+            className="absolute overflow-hidden whitespace-nowrap z-20 flex items-center"
+            style={{ height: "100%", opacity: 0, left: "var(--text-left)", willChange: "width, opacity" }}
           >
             <m.span
               variants={textSpanVariants}
