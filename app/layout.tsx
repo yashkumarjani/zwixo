@@ -45,6 +45,9 @@ export const metadata: Metadata = {
     description: "Real Photos. Real Memories. Real Emotions. Order wedding countdowns, baby milestone cards, and photo restorations in 30 seconds via WhatsApp.",
     images: ["https://zwixo-memory-studio.netlify.app/images/logo_preview.png"],
   },
+  verification: {
+    google: "rYN0_KoOlOzVqesAOdcC7W4a4FDVa9lDq7kWWWtOFS4",
+  },
 };
 
 // Tracking IDs (Read from environment variables, or leave empty to disable)
