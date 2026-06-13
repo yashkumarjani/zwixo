@@ -2,9 +2,11 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence, useReducedMotion, useScroll, Variants } from "framer-motion";
+import { m, AnimatePresence, useReducedMotion, useScroll } from "framer-motion";
 import { useTheme } from "../hooks/useTheme";
 import { useScrollTo } from "../hooks/useScrollTo";
+import { NAV_ITEMS } from "../lib/constants";
+import { getDrawerVariants } from "../lib/animations";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,18 +16,7 @@ export default function Header() {
 
   const shouldReduceMotion = useReducedMotion();
 
-  // 2026 Drawer transitions with exact spring: stiffness: 300, damping: 30
-  const drawerVariants: Variants = {
-    hidden: { x: shouldReduceMotion ? 0 : "100%" },
-    visible: { 
-      x: 0,
-      transition: shouldReduceMotion ? { duration: 0 } : { type: "spring" as const, stiffness: 300, damping: 30 }
-    },
-    exit: { 
-      x: "100%",
-      transition: shouldReduceMotion ? { duration: 0 } : { type: "spring" as const, stiffness: 300, damping: 30 }
-    }
-  };
+
 
   const { scrollY } = useScroll();
 
@@ -135,7 +126,7 @@ export default function Header() {
 
           {/* Desktop Navigation links 2026 Fix: gap-8, text-sm font-medium tracking-wide, opacity hover transitions */}
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide text-neutral-600 dark:text-neutral-400">
-            {["services", "showcase", "pricing", "testimonials"].map((item) => (
+            {NAV_ITEMS.map((item) => (
               <button
                 key={item}
                 onClick={() => handleScrollToSection(item)}
@@ -209,17 +200,17 @@ export default function Header() {
       {/* Mobile Navigation Drawer */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div
+          <m.div
             data-mobile-drawer
             data-lenis-prevent
-            variants={drawerVariants}
+            variants={getDrawerVariants(shouldReduceMotion ?? false)}
             initial="hidden"
             animate="visible"
             exit="exit"
             className="fixed inset-0 z-50 bg-white dark:bg-ink flex flex-col pt-24 pb-8 px-6 overflow-y-auto md:hidden"
           >
             <nav className="flex flex-col gap-5 text-xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200">
-              {["services", "showcase", "pricing", "testimonials"].map((item) => (
+              {NAV_ITEMS.map((item) => (
                 <button
                   key={item}
                   onClick={() => handleScrollToSection(item)}
@@ -244,7 +235,7 @@ export default function Header() {
                 <span>Order Now</span>
               </a>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </>

@@ -3,7 +3,7 @@
 
 import React, { useState, useRef } from "react";
 import PricingCard from "./PricingCard";
-import { PRICING_GROUPS } from "../constants";
+import { PRICING_GROUPS } from "../lib/constants";
 
 export default function Pricing() {
   const [activeGroup, setActiveGroup] = useState<string>("wedding-posters");

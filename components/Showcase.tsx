@@ -4,7 +4,7 @@
 import React, { useState } from "react";
 import { Sparkles } from "lucide-react";
 import CompareSlider from "./CompareSlider";
-import { SHOWCASE_ITEMS } from "../constants";
+import { SHOWCASE_ITEMS } from "../lib/constants";
 
 export default function Showcase() {
   const [activeIndex, setActiveIndex] = useState(0);

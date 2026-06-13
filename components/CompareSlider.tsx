@@ -69,7 +69,7 @@ export default function CompareSlider({ beforeImg, afterImg, beforeLabel, afterL
 
     container.addEventListener("touchmove", handleTouchMove, { passive: false });
     return () => {
-      container.removeEventListener("touchmove", handleTouchMove);
+      container.removeEventListener("touchmove", handleTouchMove, { passive: false } as unknown as EventListenerOptions);
     };
   }, []);
 
@@ -116,7 +116,7 @@ export default function CompareSlider({ beforeImg, afterImg, beforeLabel, afterL
           alt="After"
           fill
           loading="lazy"
-          sizes="(max-width: 768px) 100vw, 380px"
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover select-none pointer-events-none"
         />
         <div className="absolute bottom-5 right-5 px-3 py-1 rounded-full bg-[#F5A623] text-white text-xs font-black uppercase tracking-wider select-none shadow-sm">
@@ -136,7 +136,7 @@ export default function CompareSlider({ beforeImg, afterImg, beforeLabel, afterL
           alt="Before"
           fill
           loading="lazy"
-          sizes="(max-width: 768px) 100vw, 380px"
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover select-none pointer-events-none"
         />
         <div className="absolute bottom-5 left-5 px-3 py-1 rounded-full bg-neutral-900/80 text-white text-xs font-black uppercase tracking-wider select-none shadow-sm">
@@ -153,8 +153,8 @@ export default function CompareSlider({ beforeImg, afterImg, beforeLabel, afterL
         <button
           tabIndex={0}
           role="slider"
-          aria-label="Comparison slider"
-          aria-valuenow={Math.round(sliderPosition)}
+          aria-label="Before and after comparison slider"
+          aria-valuenow={sliderPosition}
           aria-valuemin={0}
           aria-valuemax={100}
           onKeyDown={(e) => {

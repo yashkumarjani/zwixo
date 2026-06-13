@@ -37,3 +37,31 @@ export interface Testimonial {
   author: string;
   location: string;
 }
+
+export interface CartoonFaceProps {
+  state: "neutral" | "happy" | "grin" | "celebrate";
+}
+
+export interface PricingCardProps {
+  tier: PricingTier;
+  activePricingLabel: string;
+  priceUnit: string;
+}
+
+export interface SpringCounterProps {
+  value: number;
+}
+
+export interface SmoothScrollProps {
+  children: ReactNode;
+}
+
+export interface ErrorBoundaryProps {
+  children: ReactNode;
+  sectionName?: string;
+  fallback?: ReactNode;
+}
+
+export interface ErrorBoundaryState {
+  hasError: boolean;
+}

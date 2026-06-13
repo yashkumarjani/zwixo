@@ -3,7 +3,7 @@
 
 import React from "react";
 import { useReducedMotion } from "framer-motion";
-import { TESTIMONIALS } from "../constants";
+import { TESTIMONIALS } from "../lib/constants";
 import type { Testimonial } from "../types";
 
 export default function Testimonials() {

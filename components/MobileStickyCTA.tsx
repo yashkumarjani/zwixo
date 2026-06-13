@@ -2,8 +2,9 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { motion, useScroll, useMotionValueEvent, useReducedMotion } from "framer-motion";
+import { m, useScroll, useMotionValueEvent, useReducedMotion } from "framer-motion";
 import { MessageSquare } from "lucide-react";
+import { getMobileCTAVariants } from "../lib/animations";
 
 export default function MobileStickyCTA() {
   const [isTopVisible, setIsTopVisible] = useState(true);
@@ -39,13 +40,10 @@ export default function MobileStickyCTA() {
   }, []);
 
   return (
-    <motion.div
+    <m.div
       aria-live="polite"
       initial="hidden"
-      variants={{
-        visible: { y: 0, opacity: 1 },
-        hidden: { y: shouldReduceMotion ? 0 : 100, opacity: 0 }
-      }}
+      variants={getMobileCTAVariants(shouldReduceMotion ?? false)}
       animate={isTopVisible ? "hidden" : "visible"}
       transition={shouldReduceMotion ? { duration: 0 } : { type: "spring", stiffness: 260, damping: 20 }}
       className="fixed bottom-5 left-4 right-4 z-40 md:hidden flex justify-center pointer-events-none"
@@ -60,6 +58,6 @@ export default function MobileStickyCTA() {
         <MessageSquare className="w-4 h-4 fill-current shrink-0" />
         <span>{ctaText}</span>
       </a>
-    </motion.div>
+    </m.div>
   );
 }

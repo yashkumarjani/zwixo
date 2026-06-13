@@ -3,7 +3,7 @@
 
 import React, { useRef, useEffect, useState, useCallback } from "react";
 import Image from "next/image";
-import { motion, useMotionValue, useSpring, useReducedMotion } from "framer-motion";
+import { m, useMotionValue, useSpring, useReducedMotion } from "framer-motion";
 import iphoneOrangeMockup from "../public/images/iphone_orange_mockup.png";
 
 export default function FloatingOrb() {
@@ -38,14 +38,17 @@ export default function FloatingOrb() {
 
   // Request gyroscope orientation permissions for iOS 13+
   const requestGyroPermission = async () => {
-    const RequestPermission = typeof DeviceOrientationEvent !== "undefined"
-      ? (DeviceOrientationEvent as unknown as { requestPermission?: () => Promise<"granted" | "denied"> }).requestPermission
-      : undefined;
-    if (typeof RequestPermission === "function") {
+    if (
+      typeof DeviceOrientationEvent !== "undefined" &&
+      typeof (DeviceOrientationEvent as unknown as { requestPermission?: () => Promise<"granted" | "denied"> }).requestPermission === "function"
+    ) {
       try {
-        await RequestPermission();
-      } catch {
-        // Fail silently or fallback to static
+        const permission = await (DeviceOrientationEvent as unknown as { requestPermission: () => Promise<"granted" | "denied"> }).requestPermission();
+        if (permission === "granted") {
+          console.log("Gyroscope permission granted.");
+        }
+      } catch (error) {
+        console.error("Gyroscope permission denied or failed:", error);
       }
     }
   };
@@ -122,9 +125,11 @@ export default function FloatingOrb() {
 
   return (
     <div className="relative w-full h-full flex items-center justify-center p-2">
-      <motion.div
+      <m.div
         ref={containerRef}
         onClick={requestGyroPermission}
+        role="img"
+        aria-label="Interactive iPhone mockup"
         style={{
           rotateX: shouldReduceMotion ? 0 : smoothX,
           rotateY: shouldReduceMotion ? 0 : smoothY,
@@ -153,12 +158,13 @@ export default function FloatingOrb() {
           alt="Before and after demo of Zwixo studio countdown poster shown inside an iPhone mockup"
           priority
           placeholder="blur"
+          sizes="(max-width: 768px) 100vw, 460px"
           onLoad={() => setIsLoading(false)}
           className={`w-full h-full object-contain pointer-events-none transition-opacity duration-300 ${
             isLoading ? "opacity-0" : "opacity-100"
           }`}
         />
-      </motion.div>
+      </m.div>
     </div>
   );
 }

@@ -16,8 +16,10 @@ import FloatingEmoji from "../components/FloatingEmoji";
 const Showcase = dynamic(() => import("../components/Showcase"), {
   ssr: false,
   loading: () => (
-    <div className="responsive-container py-24">
-      <div className="w-full min-h-[600px] bg-ink animate-pulse rounded-[32px] border border-gray-800" />
+    <div className="w-full pt-24 pb-20 bg-white dark:bg-ink">
+      <div className="responsive-container max-w-5xl mx-auto px-6">
+        <div className="w-full min-h-[680px] bg-neutral-100 dark:bg-neutral-900/50 animate-pulse rounded-[32px] border border-neutral-200 dark:border-neutral-800" />
+      </div>
     </div>
   ),
 });
@@ -25,8 +27,10 @@ const Showcase = dynamic(() => import("../components/Showcase"), {
 const Pricing = dynamic(() => import("../components/Pricing"), {
   ssr: false,
   loading: () => (
-    <div className="responsive-container py-24">
-      <div className="w-full min-h-[600px] bg-gray-light dark:bg-gray-dark/20 animate-pulse rounded-[32px] border border-gray-100 dark:border-gray-800" />
+    <div className="w-full pt-24 pb-20 bg-white dark:bg-ink">
+      <div className="responsive-container max-w-5xl mx-auto px-6">
+        <div className="w-full min-h-[740px] bg-neutral-100 dark:bg-neutral-900/50 animate-pulse rounded-[32px] border border-neutral-200 dark:border-neutral-800" />
+      </div>
     </div>
   ),
 });
@@ -34,8 +38,10 @@ const Pricing = dynamic(() => import("../components/Pricing"), {
 const Testimonials = dynamic(() => import("../components/Testimonials"), {
   ssr: false,
   loading: () => (
-    <div className="responsive-container py-24">
-      <div className="w-full min-h-[400px] bg-gray-light dark:bg-gray-dark/20 animate-pulse rounded-[32px] border border-gray-100 dark:border-gray-800" />
+    <div className="w-full pt-24 pb-20 bg-white dark:bg-ink">
+      <div className="responsive-container max-w-5xl mx-auto px-6">
+        <div className="w-full min-h-[420px] bg-neutral-100 dark:bg-neutral-900/50 animate-pulse rounded-[32px] border border-neutral-200 dark:border-neutral-800" />
+      </div>
     </div>
   ),
 });

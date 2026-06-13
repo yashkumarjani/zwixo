@@ -2,41 +2,23 @@
 "use client";
 
 import React from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import { Sparkles, Heart, Baby } from "lucide-react";
 import { useScrollTo } from "../hooks/useScrollTo";
-import type { ServiceItem } from "../types";
+import { SERVICES } from "../lib/constants";
 
 export default function Services() {
   const shouldReduceMotion = useReducedMotion();
   const scrollTo = useScrollTo();
 
-  const SERVICES: ServiceItem[] = [
-    {
-      id: "photo-restoration",
-      icon: <Sparkles className="w-6 h-6 text-[#F5A623]" />,
-      title: "Photo Restoration",
-      description: "Breathe new life into torn, faded, or water-damaged photographs. We professionally restore vintage memories into clean, vibrant, high-definition art.",
-      benefit: "From a cracked scan to a print-ready file.",
-      gridClass: "bento-area-a min-h-[280px]",
-    },
-    {
-      id: "wedding-posters",
-      icon: <Heart className="w-5 h-5 text-[#F5A623]" />,
-      title: "Wedding Countdown",
-      description: "Transform raw couple portraits into elegant, customized countdown posters delivered daily on WhatsApp.",
-      benefit: "Celebrate your love story day by day.",
-      gridClass: "bento-area-b min-h-[160px]",
-    },
-    {
-      id: "baby-cards",
-      icon: <Baby className="w-5 h-5 text-[#F5A623]" />,
-      title: "Baby Milestones",
-      description: "Document every adorable first smile, roll, and step with bespoke milestone cards featuring your real baby photos.",
-      benefit: "Cherish their precious early steps forever.",
-      gridClass: "bento-area-c min-h-[160px]",
+  const getIcon = (iconName: string) => {
+    switch (iconName) {
+      case "sparkles": return <Sparkles className="w-6 h-6 text-[#F5A623]" />;
+      case "heart": return <Heart className="w-5 h-5 text-[#F5A623]" />;
+      case "baby": return <Baby className="w-5 h-5 text-[#F5A623]" />;
+      default: return null;
     }
-  ];
+  };
 
   return (
     <section 
@@ -61,7 +43,7 @@ export default function Services() {
         {/* Bento Grid layout */}
         <div className="services-bento-grid">
           {SERVICES.map((service) => (
-            <motion.div
+            <m.div
               key={service.id}
               whileHover={shouldReduceMotion ? undefined : { 
                 borderColor: "rgba(245, 166, 35, 0.4)",
@@ -73,7 +55,7 @@ export default function Services() {
               <div>
                 {/* Icon wrapper inside 12x12 (48px) neutral box */}
                 <div className="w-12 h-12 rounded-xl bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center mb-6">
-                  {service.icon}
+                  {getIcon(service.iconName)}
                 </div>
 
                 <h3 className="text-xl font-bold text-ink dark:text-white mb-2">
@@ -97,7 +79,7 @@ export default function Services() {
                   → See pricing
                 </button>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 

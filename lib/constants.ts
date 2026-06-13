@@ -1,5 +1,7 @@
-// FILE: constants/index.ts
+// FILE: lib/constants.ts
 import type { ShowcaseExample, ServicePricingGroup, Testimonial } from "../types";
+
+export const NAV_ITEMS = ["services", "showcase", "pricing", "testimonials"] as const;
 
 export const SHOWCASE_ITEMS: ShowcaseExample[] = [
   {
@@ -183,4 +185,40 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Siddharth S.",
     location: "Bangalore",
   },
+];
+
+export interface ServicesData {
+  id: string;
+  iconName: "sparkles" | "heart" | "baby";
+  title: string;
+  description: string;
+  benefit: string;
+  gridClass: string;
+}
+
+export const SERVICES: ServicesData[] = [
+  {
+    id: "photo-restoration",
+    iconName: "sparkles",
+    title: "Photo Restoration",
+    description: "Breathe new life into torn, faded, or water-damaged photographs. We professionally restore vintage memories into clean, vibrant, high-definition art.",
+    benefit: "From a cracked scan to a print-ready file.",
+    gridClass: "bento-area-a min-h-[280px]",
+  },
+  {
+    id: "wedding-posters",
+    iconName: "heart",
+    title: "Wedding Countdown",
+    description: "Transform raw couple portraits into elegant, customized countdown posters delivered daily on WhatsApp.",
+    benefit: "Celebrate your love story day by day.",
+    gridClass: "bento-area-b min-h-[160px]",
+  },
+  {
+    id: "baby-cards",
+    iconName: "baby",
+    title: "Baby Milestones",
+    description: "Document every adorable first smile, roll, and step with bespoke milestone cards featuring your real baby photos.",
+    benefit: "Cherish their precious early steps forever.",
+    gridClass: "bento-area-c min-h-[160px]",
+  }
 ];

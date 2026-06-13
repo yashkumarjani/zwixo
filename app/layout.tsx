@@ -45,6 +45,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { LazyMotion, domAnimation } from "framer-motion";
+
 export interface RootLayoutProps {
   children: React.ReactNode;
 }
@@ -60,7 +62,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
           Skip to content
         </a>
         <SmoothScroll>
-          {children}
+          <LazyMotion features={domAnimation} strict>
+            {children}
+          </LazyMotion>
         </SmoothScroll>
       </body>
     </html>

@@ -1,17 +1,9 @@
 // FILE: components/ErrorBoundary.tsx
 "use client";
 
-import React, { Component, ReactNode } from "react";
+import React, { Component } from "react";
 
-export interface ErrorBoundaryProps {
-  children: ReactNode;
-  sectionName?: string;
-  fallback?: ReactNode;
-}
-
-interface ErrorBoundaryState {
-  hasError: boolean;
-}
+import type { ErrorBoundaryProps, ErrorBoundaryState } from "../types";
 
 export default class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   public override state: ErrorBoundaryState = {

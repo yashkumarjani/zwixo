@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, useScroll, useTransform, useMotionValueEvent, useReducedMotion } from "framer-motion";
+import { m, useScroll, useTransform, useMotionValueEvent, useReducedMotion } from "framer-motion";
 import CartoonFace from "./CartoonFace";
 
 export default function FloatingEmoji() {
@@ -35,7 +35,7 @@ export default function FloatingEmoji() {
   });
 
   return (
-    <motion.div
+    <m.div
       style={{
         y: shouldReduceMotion ? "50vh" : y,
         x: shouldReduceMotion ? "0px" : x,
@@ -69,6 +69,6 @@ export default function FloatingEmoji() {
           <div className="absolute bottom-[-4px] right-4 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:right-[-4px] w-2 h-2 rotate-45 bg-white dark:bg-ink border-b border-r border-gray-200/50 dark:border-gray-800 md:border-b-0 md:border-l-0 md:border-t md:border-r" />
         </div>
       </div>
-    </motion.div>
+    </m.div>
   );
 }

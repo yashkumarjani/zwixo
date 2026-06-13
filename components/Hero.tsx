@@ -2,7 +2,7 @@
 "use client";
 
 import React from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import FloatingOrb from "./FloatingOrb";
 import SpringCounter from "./SpringCounter";
@@ -35,6 +35,7 @@ export default function Hero() {
               alt="Zwixo Mobile Preview"
               fill
               priority
+              sizes="(max-width: 640px) 200px, 200px"
               className="object-contain"
             />
           </div>
@@ -122,7 +123,7 @@ export default function Hero() {
         >
           <span>Scroll Down</span>
           <div className="w-5 h-9 rounded-full border border-neutral-300 dark:border-neutral-700 p-1 flex justify-center">
-            <motion.div 
+            <m.div 
               initial={{ y: 0 }}
               animate={shouldReduceMotion ? {} : { y: [0, 10, 0] }}
               transition={shouldReduceMotion ? { duration: 0 } : { duration: 1.5, repeat: Infinity, ease: "easeInOut" }}

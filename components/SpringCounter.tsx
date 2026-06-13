@@ -2,14 +2,12 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { useMotionValue, useSpring } from "framer-motion";
-
-export interface SpringCounterProps {
-  value: number;
-}
+import { useMotionValue, useSpring, useReducedMotion } from "framer-motion";
+import type { SpringCounterProps } from "../types";
 
 export default function SpringCounter({ value }: SpringCounterProps) {
   const [isMounted, setIsMounted] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
   const motionValue = useMotionValue(0);
   const springVal = useSpring(motionValue, { stiffness: 60, damping: 18 });
   const [currentVal, setCurrentVal] = useState(0);
@@ -21,16 +19,18 @@ export default function SpringCounter({ value }: SpringCounterProps) {
   }, []);
 
   useEffect(() => {
-    if (!isMounted) return;
+    if (!isMounted || shouldReduceMotion) return;
     motionValue.set(value);
-  }, [value, motionValue, isMounted]);
+  }, [value, motionValue, isMounted, shouldReduceMotion]);
 
   useEffect(() => {
-    if (!isMounted) return;
+    if (!isMounted || shouldReduceMotion) return;
     return springVal.on("change", (latest) => {
       setCurrentVal(Math.round(latest));
     });
-  }, [springVal, isMounted]);
+  }, [springVal, isMounted, shouldReduceMotion]);
 
-  return <span>{isMounted ? currentVal.toLocaleString() : "0"}</span>;
+  const displayVal = shouldReduceMotion ? value : currentVal;
+
+  return <span>{isMounted ? displayVal.toLocaleString() : "0"}</span>;
 }

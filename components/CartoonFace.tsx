@@ -2,11 +2,10 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 
-export interface CartoonFaceProps {
-  state: "neutral" | "happy" | "grin" | "celebrate";
-}
+import type { CartoonFaceProps } from "../types";
+import { getBodyVariants } from "../lib/animations";
 
 const paths = {
   leftEye: {
@@ -36,27 +35,9 @@ const paths = {
 } as const;
 
 export default function CartoonFace({ state }: CartoonFaceProps) {
-  const bodyVariants = {
-    neutral: {
-      y: [0, -1.5, 0],
-      transition: { repeat: Infinity, duration: 3, ease: "easeInOut" as const }
-    },
-    happy: {
-      scale: [1, 1.04, 1],
-      y: [0, -2.5, 0],
-      transition: { repeat: Infinity, duration: 1.5, ease: "easeInOut" as const }
-    },
-    grin: {
-      rotate: [0, -2, 2, 0],
-      transition: { repeat: Infinity, duration: 2, ease: "easeInOut" as const }
-    },
-    celebrate: {
-      y: [0, -3.5, 0],
-      rotate: [0, -3, 3, 0],
-      scale: [1, 1.05, 1],
-      transition: { repeat: Infinity, duration: 1.2, ease: "easeInOut" as const }
-    }
-  };
+  const shouldReduceMotion = useReducedMotion();
+  const bodyVariants = getBodyVariants(shouldReduceMotion ?? false);
+
 
   return (
     <svg viewBox="0 0 76 76" className="w-full h-full select-none" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -67,20 +48,20 @@ export default function CartoonFace({ state }: CartoonFaceProps) {
       <rect width="76" height="76" rx="18" fill="#1C1C1E"/>
 
       {/* Animated Z-Mascot Body & Face */}
-      <motion.g
+      <m.g
         variants={bodyVariants}
         animate={state}
         style={{ transformOrigin: "38px 38px" }}
       >
         {/* Dynamic Morphing Diagonal Bar / Nose */}
-        <motion.polygon
+        <m.polygon
           fill="#F5A623"
           animate={{ points: paths.diagonal[state] }}
           transition={{ duration: 0.45, ease: "easeInOut" as const }}
         />
 
         {/* Dynamic Morphing Left Eye Path */}
-        <motion.path
+        <m.path
           animate={{
             d: paths.leftEye[state],
             scaleY: state === "neutral" ? [1, 1, 0.1, 1] : 1,
@@ -100,7 +81,7 @@ export default function CartoonFace({ state }: CartoonFaceProps) {
         />
 
         {/* Dynamic Morphing Right Eye Path */}
-        <motion.path
+        <m.path
           animate={{
             d: paths.rightEye[state],
             scaleY: state === "neutral" ? [1, 1, 0.1, 1] : 1,
@@ -120,14 +101,14 @@ export default function CartoonFace({ state }: CartoonFaceProps) {
         />
 
         {/* Dynamic Morphing Mouth Path */}
-        <motion.path
+        <m.path
           fill="#F5A623"
           animate={{ d: paths.mouth[state] }}
           transition={{ duration: 0.45, ease: "easeInOut" as const }}
         />
 
         {/* Inner throat opening for open laughing mouth in grin and celebrate (fades in) */}
-        <motion.path
+        <m.path
           d="M 18,48 Q 38,53 58,48 C 57,51 55,59 38,59 C 21,59 19,51 18,48 Z"
           fill="#1C1C1E"
           animate={{ opacity: (state === "grin" || state === "celebrate") ? 1 : 0 }}
@@ -135,7 +116,7 @@ export default function CartoonFace({ state }: CartoonFaceProps) {
         />
 
         {/* Pink tongue inside open mouth for grin and celebrate (fades in) */}
-        <motion.path
+        <m.path
           d="M 30,59 C 32,54 44,54 46,59 Z"
           fill="#FF8A80"
           animate={{ opacity: (state === "grin" || state === "celebrate") ? 1 : 0 }}
@@ -143,7 +124,7 @@ export default function CartoonFace({ state }: CartoonFaceProps) {
         />
 
         {/* Teeth specifically for grin state */}
-        <motion.rect
+        <m.rect
           x="34.5"
           y="49"
           width="7"
@@ -154,7 +135,7 @@ export default function CartoonFace({ state }: CartoonFaceProps) {
           transition={{ duration: 0.3 }}
         />
 
-      </motion.g>
+      </m.g>
     </svg>
   );
 }
