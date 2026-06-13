@@ -3,12 +3,14 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence, useReducedMotion, useScroll, Variants } from "framer-motion";
-
+import { useTheme } from "../hooks/useTheme";
+import { useScrollTo } from "../hooks/useScrollTo";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const { theme, toggleTheme } = useTheme();
+  const scrollTo = useScrollTo();
 
   const shouldReduceMotion = useReducedMotion();
 
@@ -32,22 +34,6 @@ export default function Header() {
       setIsScrolled(latest > 20);
     });
   }, [scrollY]);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
-    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const activeTheme = (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) ? "dark" : "light";
-    
-    if (activeTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-    
-    requestAnimationFrame(() => {
-      setTheme(activeTheme);
-    });
-  }, []);
 
   useEffect(() => {
     if (isMobileMenuOpen) {
@@ -103,24 +89,9 @@ export default function Header() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isMobileMenuOpen]);
 
-  const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      setTheme("light");
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  };
-
-  const handleScrollTo = (id: string) => {
+  const handleScrollToSection = (id: string) => {
     setIsMobileMenuOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    scrollTo(id);
   };
 
   return (
@@ -167,7 +138,7 @@ export default function Header() {
             {["services", "showcase", "pricing", "testimonials"].map((item) => (
               <button
                 key={item}
-                onClick={() => handleScrollTo(item)}
+                onClick={() => handleScrollToSection(item)}
                 className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-200 cursor-pointer capitalize py-1 focus-visible:ring-2 focus-visible:ring-[#F5A623] focus-visible:ring-offset-2 rounded-md px-1"
               >
                 {item}
@@ -251,7 +222,7 @@ export default function Header() {
               {["services", "showcase", "pricing", "testimonials"].map((item) => (
                 <button
                   key={item}
-                  onClick={() => handleScrollTo(item)}
+                  onClick={() => handleScrollToSection(item)}
                   className="text-left py-4 hover:text-[#F5A623] dark:hover:text-[#F5A623] transition-colors capitalize border-b border-neutral-100 dark:border-neutral-900 flex justify-between items-center cursor-pointer focus-visible:ring-2 focus-visible:ring-[#F5A623] focus-visible:ring-offset-2 rounded-lg px-1"
                 >
                   <span>{item}</span>

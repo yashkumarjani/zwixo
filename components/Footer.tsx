@@ -2,14 +2,10 @@
 "use client";
 
 import React from "react";
+import { useScrollTo } from "../hooks/useScrollTo";
 
 export default function Footer() {
-  const handleScrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const scrollTo = useScrollTo();
 
   return (
     <footer
@@ -63,22 +59,22 @@ export default function Footer() {
             <span className="text-xs font-bold text-neutral-400 dark:text-neutral-500 uppercase tracking-widest">Directory</span>
             <ul className="space-y-2.5 text-sm font-semibold text-neutral-600 dark:text-neutral-400">
               <li>
-                <button onClick={() => handleScrollTo("services")} className="hover:text-[#F5A623] transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-[#F5A623] focus-visible:ring-offset-2 rounded px-1 text-left">
+                <button onClick={() => scrollTo("services")} className="hover:text-[#F5A623] transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-[#F5A623] focus-visible:ring-offset-2 rounded px-1 text-left">
                   What We Create
                 </button>
               </li>
               <li>
-                <button onClick={() => handleScrollTo("showcase")} className="hover:text-[#F5A623] transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-[#F5A623] focus-visible:ring-offset-2 rounded px-1 text-left">
+                <button onClick={() => scrollTo("showcase")} className="hover:text-[#F5A623] transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-[#F5A623] focus-visible:ring-offset-2 rounded px-1 text-left">
                   Restoration Showcase
                 </button>
               </li>
               <li>
-                <button onClick={() => handleScrollTo("pricing")} className="hover:text-[#F5A623] transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-[#F5A623] focus-visible:ring-offset-2 rounded px-1 text-left">
+                <button onClick={() => scrollTo("pricing")} className="hover:text-[#F5A623] transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-[#F5A623] focus-visible:ring-offset-2 rounded px-1 text-left">
                   Investment &amp; Packages
                 </button>
               </li>
               <li>
-                <button onClick={() => handleScrollTo("testimonials")} className="hover:text-[#F5A623] transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-[#F5A623] focus-visible:ring-offset-2 rounded px-1 text-left">
+                <button onClick={() => scrollTo("testimonials")} className="hover:text-[#F5A623] transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-[#F5A623] focus-visible:ring-offset-2 rounded px-1 text-left">
                   Client Love
                 </button>
               </li>

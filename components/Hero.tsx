@@ -1,52 +1,15 @@
 // FILE: components/Hero.tsx
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { motion, useMotionValue, useSpring, useReducedMotion } from "framer-motion";
+import React from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import FloatingOrb from "./FloatingOrb";
-
-
-export interface SpringCounterProps {
-  value: number;
-}
-
-// Spring Ticker Counter
-function SpringCounter({ value }: SpringCounterProps) {
-  const [isMounted, setIsMounted] = useState(false);
-  const motionValue = useMotionValue(0);
-  const springVal = useSpring(motionValue, { stiffness: 60, damping: 18 });
-  const [currentVal, setCurrentVal] = useState(0);
-
-  useEffect(() => {
-    requestAnimationFrame(() => {
-      setIsMounted(true);
-    });
-  }, []);
-
-  useEffect(() => {
-    if (!isMounted) return;
-    motionValue.set(value);
-  }, [value, motionValue, isMounted]);
-
-  useEffect(() => {
-    if (!isMounted) return;
-    return springVal.on("change", (latest) => {
-      setCurrentVal(Math.round(latest));
-    });
-  }, [springVal, isMounted]);
-
-  return <span>{isMounted ? currentVal.toLocaleString() : "0"}</span>;
-}
+import SpringCounter from "./SpringCounter";
+import { useScrollTo } from "../hooks/useScrollTo";
 
 export default function Hero() {
-  const handleScrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
+  const scrollTo = useScrollTo();
   const shouldReduceMotion = useReducedMotion();
 
   return (
@@ -140,7 +103,7 @@ export default function Hero() {
               </a>
 
               <button
-                onClick={() => handleScrollTo("services")}
+                onClick={() => scrollTo("services")}
                 className="text-neutral-600 dark:text-neutral-400 underline-offset-4 hover:underline text-sm font-medium cursor-pointer"
               >
                 See Our Work
@@ -154,7 +117,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <div className="w-full flex justify-center pb-4 z-10">
         <button 
-          onClick={() => handleScrollTo("services")}
+          onClick={() => scrollTo("services")}
           className="group text-neutral-400 hover:text-[#F5A623] transition-colors cursor-pointer flex flex-col items-center gap-2 text-[10px] font-black uppercase tracking-widest focus-visible:ring-2 focus-visible:ring-[#F5A623] focus-visible:ring-offset-2 rounded-lg p-1"
         >
           <span>Scroll Down</span>

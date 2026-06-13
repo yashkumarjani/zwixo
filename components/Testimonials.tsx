@@ -3,55 +3,8 @@
 
 import React from "react";
 import { useReducedMotion } from "framer-motion";
-
-export interface Testimonial {
-  quote: string;
-  author: string;
-  location: string;
-}
-
-const TESTIMONIALS: Testimonial[] = [
-  {
-    quote: "The wedding countdown posters were absolutely magical! Built so much hype.",
-    author: "Priya S.",
-    location: "Pune",
-  },
-  {
-    quote: "My mom cried seeing her old childhood photo restored. Thank you Zwixo.",
-    author: "Rahul M.",
-    location: "Surat",
-  },
-  {
-    quote: "Baby milestone cards were so stunning, better than any automated app templates!",
-    author: "Sneha P.",
-    location: "Ahmedabad",
-  },
-  {
-    quote: "Got my parents anniversary portrait restored. Superb quality and quick delivery!",
-    author: "Ankit V.",
-    location: "Vadodara",
-  },
-  {
-    quote: "Amazing manual coloring on our old family portrait. It feels alive again.",
-    author: "Meera K.",
-    location: "Ahmedabad",
-  },
-  {
-    quote: "Every day we received a new countdown poster on WhatsApp. The print quality is top notch.",
-    author: "Rohan D.",
-    location: "Mumbai",
-  },
-  {
-    quote: "Extremely professional restoration. The cracks are gone and face details are crystal clear.",
-    author: "Deepa J.",
-    location: "Ahmedabad",
-  },
-  {
-    quote: "Quick WhatsApp support, clear pricing, and no AI distortion. Meticulous hand-crafted work.",
-    author: "Siddharth S.",
-    location: "Bangalore",
-  },
-];
+import { TESTIMONIALS } from "../constants";
+import type { Testimonial } from "../types";
 
 export default function Testimonials() {
   const shouldReduceMotion = useReducedMotion();

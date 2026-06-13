@@ -4,18 +4,12 @@
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Sparkles, Heart, Baby } from "lucide-react";
-
-export interface ServiceItem {
-  id: string;
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  benefit: string;
-  gridClass: string;
-}
+import { useScrollTo } from "../hooks/useScrollTo";
+import type { ServiceItem } from "../types";
 
 export default function Services() {
   const shouldReduceMotion = useReducedMotion();
+  const scrollTo = useScrollTo();
 
   const SERVICES: ServiceItem[] = [
     {
@@ -43,13 +37,6 @@ export default function Services() {
       gridClass: "bento-area-c min-h-[160px]",
     }
   ];
-
-  const handleScrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section 
@@ -104,7 +91,7 @@ export default function Services() {
                 </span>
                 
                 <button
-                  onClick={() => handleScrollTo("pricing")}
+                  onClick={() => scrollTo("pricing")}
                   className="text-xs text-neutral-400 hover:text-[#F5A623] dark:text-neutral-500 dark:hover:text-[#F5A623] transition-colors font-medium flex items-center gap-1 cursor-pointer"
                 >
                   → See pricing
