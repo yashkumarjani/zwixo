@@ -15,7 +15,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
     };
   }, []);
 
-  // Animation timeline configuration using a modern 2.0-second total duration (2026 performance trend)
+  // Animation timeline configuration scaled to a 5.0-second total duration (for visual inspection)
   const logoVariants = {
     initial: { scale: shouldReduceMotion ? 1 : 0.85, opacity: 0, x: shouldReduceMotion ? "var(--logo-x)" : 0 },
     animate: {
@@ -26,11 +26,11 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
   };
 
   const logoTransition = shouldReduceMotion
-    ? { duration: 0.4, ease: "easeOut" as const }
+    ? { duration: 1.0, ease: "easeOut" as const }
     : {
-        scale: { duration: 0.5, ease: "easeOut" as const },
-        opacity: { duration: 0.5, ease: "easeOut" as const },
-        x: { duration: 0.6, delay: 0.7, ease: "easeInOut" as const },
+        scale: { duration: 1.25, ease: "easeOut" as const },
+        opacity: { duration: 1.25, ease: "easeOut" as const },
+        x: { duration: 1.5, delay: 1.75, ease: "easeInOut" as const },
       };
 
   const textContainerVariants = {
@@ -42,10 +42,10 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
   };
 
   const textContainerTransition = shouldReduceMotion
-    ? { duration: 0.4, delay: 0.1, ease: "easeOut" as const }
+    ? { duration: 1.0, delay: 0.25, ease: "easeOut" as const }
     : {
-        width: { duration: 0.6, delay: 0.7, ease: "easeInOut" as const },
-        opacity: { duration: 0.6, delay: 0.7, ease: "easeInOut" as const },
+        width: { duration: 1.5, delay: 1.75, ease: "easeInOut" as const },
+        opacity: { duration: 1.5, delay: 1.75, ease: "easeInOut" as const },
       };
 
   const textSpanVariants = {
@@ -58,12 +58,12 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
   const textSpanTransition = shouldReduceMotion
     ? { duration: 0 }
     : {
-        duration: 0.6,
-        delay: 0.7,
+        duration: 1.5,
+        delay: 1.75,
         ease: "easeOut" as const,
       };
 
-  // Tagline starts after logo and wordmark are fully static at t = 1.3s
+  // Tagline starts after logo and wordmark are fully static at t = 3.25s
   const taglineVariants = {
     initial: { opacity: 0, y: shouldReduceMotion ? 0 : -18 },
     animate: {
@@ -73,10 +73,10 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
   };
 
   const taglineTransition = shouldReduceMotion
-    ? { duration: 0.4, delay: 0.3, ease: "easeOut" as const }
+    ? { duration: 1.0, delay: 0.75, ease: "easeOut" as const }
     : {
-        duration: 0.7,
-        delay: 1.3,
+        duration: 1.75,
+        delay: 3.25,
         ease: "easeOut" as const,
       };
 
