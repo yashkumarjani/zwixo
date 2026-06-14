@@ -9,6 +9,8 @@
   --color-gray-light: #F2F2F7;
   
   --font-sans: var(--font-plus-jakarta), system-ui, -apple-system, sans-serif;
+  
+  --breakpoint-xs: 480px;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
