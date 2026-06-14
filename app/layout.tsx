@@ -15,6 +15,10 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://zwixo-memory-studio.netlify.app"),
+  alternates: {
+    canonical: "/",
+  },
   title: "ZWIXO | India's WhatsApp-first Memory & Celebration Studio",
   description: "Snap it. Glow it. Deliver it. We restore, edit, and curate your real photos, family moments, and celebrations with hand-curated artistry in Ahmedabad, Gujarat.",
   keywords: ["Zwixo", "photo restoration", "wedding countdown posters", "baby milestone cards", "creative edit", "wedding website", "Ahmedabad studio"],
