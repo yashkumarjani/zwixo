@@ -9,41 +9,52 @@ import type { ShowcaseExample } from "../types";
 export default function CompareSlider({ beforeImg, afterImg, beforeLabel, afterLabel }: ShowcaseExample) {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
+  
   const containerRef = useRef<HTMLDivElement>(null);
-  const touchStartRef = useRef<{ x: number; y: number } | null>(null);
-  const isDraggingRef = useRef(false);
+  const foregroundRef = useRef<HTMLDivElement>(null);
+  const dividerRef = useRef<HTMLDivElement>(null);
+  const handleButtonRef = useRef<HTMLButtonElement>(null);
 
-  useEffect(() => {
-    isDraggingRef.current = isDragging;
-  }, [isDragging]);
+  const isDraggingRef = useRef(false);
+  const touchStartRef = useRef<{ x: number; y: number } | null>(null);
+  const sliderPositionRef = useRef(50);
 
   const shouldReduceMotion = useReducedMotion();
 
-  // 2026 Fix: Animate drag handle on mount to show it is interactive (50 -> 35 -> 50)
+  // Helper function to update the DOM elements directly (60fps/120fps smooth)
+  const updatePositions = (percentage: number) => {
+    const rounded = Math.max(0, Math.min(100, percentage));
+    sliderPositionRef.current = rounded;
+
+    if (foregroundRef.current) {
+      foregroundRef.current.style.clipPath = `polygon(0 0, ${rounded}% 0, ${rounded}% 100%, 0 100%)`;
+    }
+    if (dividerRef.current) {
+      dividerRef.current.style.left = `${rounded}%`;
+    }
+    if (handleButtonRef.current) {
+      handleButtonRef.current.setAttribute("aria-valuenow", Math.round(rounded).toString());
+    }
+  };
+
+  // Animate drag handle on mount to show it is interactive (50 -> 35 -> 50)
   useEffect(() => {
     if (shouldReduceMotion) return;
-    const t1 = setTimeout(() => setSliderPosition(35), 400);
-    const t2 = setTimeout(() => setSliderPosition(50), 1000);
+    const t1 = setTimeout(() => {
+      updatePositions(35);
+      setSliderPosition(35);
+    }, 400);
+    const t2 = setTimeout(() => {
+      updatePositions(50);
+      setSliderPosition(50);
+    }, 1000);
     return () => {
       clearTimeout(t1);
       clearTimeout(t2);
     };
   }, [shouldReduceMotion]);
 
-  const handleMove = (clientX: number) => {
-    if (!containerRef.current) return;
-    const rect = containerRef.current.getBoundingClientRect();
-    const x = clientX - rect.left;
-    const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
-    setSliderPosition(percentage);
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging) return;
-    handleMove(e.clientX);
-  };
-
-  // 2026 Fix: Imperative touch handler separating page scroll from slider drag
+  // Imperative touch handler separating page scroll from slider drag
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -54,42 +65,62 @@ export default function CompareSlider({ beforeImg, afterImg, beforeLabel, afterL
         const deltaX = e.touches[0].clientX - touchStartRef.current.x;
         const deltaY = e.touches[0].clientY - touchStartRef.current.y;
         
-        // Horizontal gesture lock
+        // Horizontal gesture lock (only prevent scrolling if swiping horizontally)
         if (Math.abs(deltaX) > Math.abs(deltaY)) {
           if (e.cancelable) {
             e.preventDefault();
           }
           const rect = container.getBoundingClientRect();
           const x = e.touches[0].clientX - rect.left;
-          const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
-          setSliderPosition(percentage);
+          const percentage = (x / rect.width) * 100;
+          updatePositions(percentage);
         }
       }
     };
 
     container.addEventListener("touchmove", handleTouchMove, { passive: false });
     return () => {
-      container.removeEventListener("touchmove", handleTouchMove, { passive: false } as unknown as EventListenerOptions);
+      container.removeEventListener("touchmove", handleTouchMove);
     };
   }, []);
 
+  // Listen for mousemove/mouseup/touchend on window while dragging is active
   useEffect(() => {
-    const handleMouseUp = () => {
-      setIsDragging(false);
-      // Snaps to nearest 10% on release
-      setSliderPosition((prev) => Math.round(prev / 10) * 10);
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isDraggingRef.current || !containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const percentage = (x / rect.width) * 100;
+      updatePositions(percentage);
     };
+
+    const handleMouseUp = () => {
+      if (isDraggingRef.current) {
+        isDraggingRef.current = false;
+        setIsDragging(false);
+        // Snaps to nearest 10% on release
+        const currentPos = sliderPositionRef.current;
+        const snapped = Math.round(currentPos / 10) * 10;
+        updatePositions(snapped);
+        setSliderPosition(snapped);
+      }
+    };
+
     if (isDragging) {
+      window.addEventListener("mousemove", handleMouseMove);
       window.addEventListener("mouseup", handleMouseUp);
       window.addEventListener("touchend", handleMouseUp);
     }
+
     return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseup", handleMouseUp);
       window.removeEventListener("touchend", handleMouseUp);
     };
   }, [isDragging]);
 
   const onDragStart = (clientX: number, clientY: number) => {
+    isDraggingRef.current = true;
     setIsDragging(true);
     touchStartRef.current = { x: clientX, y: clientY };
   };
@@ -107,7 +138,6 @@ export default function CompareSlider({ beforeImg, afterImg, beforeLabel, afterL
           onDragStart(e.touches[0].clientX, e.touches[0].clientY);
         }
       }}
-      onMouseMove={handleMouseMove}
     >
       {/* Background Image: AFTER */}
       <div className="absolute inset-0 w-full h-full">
@@ -126,6 +156,7 @@ export default function CompareSlider({ beforeImg, afterImg, beforeLabel, afterL
 
       {/* Foreground Image: BEFORE */}
       <div
+        ref={foregroundRef}
         className="absolute inset-0 w-full h-full"
         style={{
           clipPath: `polygon(0 0, ${sliderPosition}% 0, ${sliderPosition}% 100%, 0 100%)`,
@@ -146,11 +177,13 @@ export default function CompareSlider({ beforeImg, afterImg, beforeLabel, afterL
 
       {/* Slider Divider line */}
       <div
+        ref={dividerRef}
         className="absolute top-0 bottom-0 w-0.5 bg-[#F5A623] pointer-events-none"
         style={{ left: `${sliderPosition}%` }}
       >
         {/* Handle: 44px circle, white bg, saffron border */}
         <button
+          ref={handleButtonRef}
           tabIndex={0}
           role="slider"
           aria-label="Before and after comparison slider"
@@ -159,9 +192,13 @@ export default function CompareSlider({ beforeImg, afterImg, beforeLabel, afterL
           aria-valuemax={100}
           onKeyDown={(e) => {
             if (e.key === "ArrowLeft") {
-              setSliderPosition((prev) => Math.max(0, prev - 5));
+              const next = Math.max(0, sliderPositionRef.current - 5);
+              updatePositions(next);
+              setSliderPosition(next);
             } else if (e.key === "ArrowRight") {
-              setSliderPosition((prev) => Math.min(100, prev + 5));
+              const next = Math.min(100, sliderPositionRef.current + 5);
+              updatePositions(next);
+              setSliderPosition(next);
             }
           }}
           className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-white border-2 border-[#F5A623] text-[#F5A623] flex items-center justify-center shadow-lg cursor-ew-resize pointer-events-auto outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623] focus-visible:ring-offset-2"
