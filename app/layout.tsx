@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   title: "ZWIXO | India's WhatsApp-first Memory & Celebration Studio",
-  description: "Snap it. Glow it. Deliver it. We restore, edit, and curate your real photos, family moments, and celebrations with hand-curated artistry in Ahmedabad, Gujarat.",
-  keywords: ["Zwixo", "photo restoration", "wedding countdown posters", "baby milestone cards", "creative edit", "wedding website", "Ahmedabad studio"],
+  description: "ZWIXO is India's premium WhatsApp-first Memory & Celebration Studio. We restore family photos, design wedding countdowns, and Baby Milestone cards in Ahmedabad.",
+  keywords: ["ZWIXO", "Zwixo", "ZWIXO Memory Studio", "Zwixo Studio", "ZWIXO Photo Restoration", "Zwixo Countdown", "photo restoration", "wedding countdown posters", "baby milestone cards", "creative edit", "wedding website", "Ahmedabad studio"],
   authors: [{ name: "Yash & Gautami" }],
   icons: {
     icon: "/icon.svg",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "ZWIXO | Memory & Celebration Studio",
-    description: "Real Photos. Real Memories. Real Emotions. Order wedding countdowns, baby milestone cards, and photo restorations in 30 seconds via WhatsApp.",
+    description: "ZWIXO is India's premium WhatsApp-first memory and photo editing studio. Order photo restorations, wedding countdowns, and baby milestones in 30 seconds.",
     url: "https://zwixo-memory-studio.netlify.app",
     siteName: "ZWIXO",
     locale: "en_IN",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "ZWIXO | Memory & Celebration Studio",
-    description: "Real Photos. Real Memories. Real Emotions. Order wedding countdowns, baby milestone cards, and photo restorations in 30 seconds via WhatsApp.",
+    description: "ZWIXO is India's premium WhatsApp-first memory and photo editing studio. Order photo restorations, wedding countdowns, and baby milestones in 30 seconds.",
     images: ["https://zwixo-memory-studio.netlify.app/images/logo_preview.png"],
   },
   verification: {
@@ -58,45 +58,60 @@ export const metadata: Metadata = {
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "";
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "";
 
-// Structured Data (JSON-LD) for LocalBusiness/ProfessionalService SEO
+// Structured Data (JSON-LD) for LocalBusiness/ProfessionalService and WebSite SEO
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "ZWIXO",
-  "image": "https://zwixo-memory-studio.netlify.app/images/logo_preview.png",
-  "@id": "https://zwixo-memory-studio.netlify.app/#organization",
-  "url": "https://zwixo-memory-studio.netlify.app",
-  "telephone": "+918320870517",
-  "priceRange": "₹₹",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Satellite",
-    "addressLocality": "Ahmedabad",
-    "addressRegion": "Gujarat",
-    "postalCode": "380015",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 23.0305,
-    "longitude": 72.5076
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
-    ],
-    "opens": "09:00",
-    "closes": "21:00"
-  },
-  "sameAs": [
-    "https://wa.me/918320870517"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://zwixo-memory-studio.netlify.app/#website",
+      "url": "https://zwixo-memory-studio.netlify.app",
+      "name": "ZWIXO",
+      "alternateName": ["Zwixo", "ZWIXO Memory Studio", "Zwixo Studio"],
+      "description": "ZWIXO is India's premium WhatsApp-first Memory & Celebration Studio.",
+      "publisher": {
+        "@id": "https://zwixo-memory-studio.netlify.app/#organization"
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://zwixo-memory-studio.netlify.app/#organization",
+      "name": "ZWIXO",
+      "image": "https://zwixo-memory-studio.netlify.app/images/logo_preview.png",
+      "url": "https://zwixo-memory-studio.netlify.app",
+      "telephone": "+918320870517",
+      "priceRange": "₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Satellite",
+        "addressLocality": "Ahmedabad",
+        "addressRegion": "Gujarat",
+        "postalCode": "380015",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 23.0305,
+        "longitude": 72.5076
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "09:00",
+        "closes": "21:00"
+      },
+      "sameAs": [
+        "https://wa.me/918320870517"
+      ]
+    }
   ]
 };
 

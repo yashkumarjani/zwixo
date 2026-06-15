@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useReducedMotion } from "framer-motion";
 import type { ShowcaseExample } from "../types";
 
-export default function CompareSlider({ beforeImg, afterImg, beforeLabel, afterLabel }: ShowcaseExample) {
+export default function CompareSlider({ beforeImg, afterImg, beforeLabel, afterLabel, title }: ShowcaseExample) {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   
@@ -143,7 +143,7 @@ export default function CompareSlider({ beforeImg, afterImg, beforeLabel, afterL
       <div className="absolute inset-0 w-full h-full">
         <Image
           src={afterImg}
-          alt="After"
+          alt={`${title || "Showcase example"} - After ZWIXO`}
           fill
           loading="lazy"
           sizes="(max-width: 768px) 100vw, 50vw"
@@ -164,7 +164,7 @@ export default function CompareSlider({ beforeImg, afterImg, beforeLabel, afterL
       >
         <Image
           src={beforeImg}
-          alt="Before"
+          alt={`${title || "Showcase example"} - Before ZWIXO`}
           fill
           loading="lazy"
           sizes="(max-width: 768px) 100vw, 50vw"
