@@ -113,6 +113,7 @@ export const PRICING_GROUPS: ServicePricingGroup[] = [
         name: "Standard Restore",
         price: "₹499",
         features: [
+          "🎁 FREE AI Memory Video Gift",
           "Mild scratch & dust removal",
           "Color enhancement & contrast",
           "Delivered within 24 hours",
@@ -124,6 +125,7 @@ export const PRICING_GROUPS: ServicePricingGroup[] = [
         price: "₹699",
         isPopular: true,
         features: [
+          "🎁 FREE AI Memory Video Gift",
           "Heavy scratch & tear repair",
           "Skin texture & face detail restoration",
           "Delivered within 24 hours",
@@ -134,6 +136,7 @@ export const PRICING_GROUPS: ServicePricingGroup[] = [
         name: "Heavy Restore",
         price: "₹999",
         features: [
+          "🎁 FREE AI Memory Video Gift",
           "Complete face/element reconstruction",
           "Advanced manual coloring",
           "Delivered within 24 hours",
@@ -200,9 +203,9 @@ export const SERVICES: ServicesData[] = [
   {
     id: "photo-restoration",
     iconName: "sparkles",
-    title: "Photo Restoration",
-    description: "Breathe new life into torn, faded, or water-damaged photographs. We professionally restore vintage memories into clean, vibrant, high-definition art.",
-    benefit: "From a cracked scan to a print-ready file.",
+    title: "Photo Restoration + Free AI Video",
+    description: "Breathe new life into torn, faded, or water-damaged photographs. Every restoration includes a 100% FREE AI Animated Memory Video bringing your portrait to life.",
+    benefit: "From a cracked scan to a living animated memory.",
     gridClass: "bento-area-a min-h-[280px]",
   },
   {
