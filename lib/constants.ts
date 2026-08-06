@@ -40,7 +40,7 @@ export const PRICING_GROUPS: ServicePricingGroup[] = [
           "5 Personalized daily posters",
           "HD Quality PNG delivery",
           "1 Revision per design",
-          "Delivered daily on WhatsApp"
+          "⚡ Daily WhatsApp Delivery (24h Setup)"
         ]
       },
       {
@@ -51,7 +51,7 @@ export const PRICING_GROUPS: ServicePricingGroup[] = [
           "10 Personalized daily posters",
           "HD Quality PNG delivery",
           "1 Revision per design",
-          "Delivered daily on WhatsApp"
+          "⚡ Daily WhatsApp Delivery (24h Setup)"
         ]
       },
       {
@@ -61,7 +61,7 @@ export const PRICING_GROUPS: ServicePricingGroup[] = [
           "15 Personalized daily posters",
           "HD Quality PNG delivery",
           "1 Revision per design",
-          "Delivered daily on WhatsApp"
+          "⚡ Daily WhatsApp Delivery (48h Priority Setup)"
         ]
       }
     ]
@@ -77,7 +77,7 @@ export const PRICING_GROUPS: ServicePricingGroup[] = [
         features: [
           "3 Unique milestone designs",
           "Real baby photos (not templates)",
-          "Delivered within 48 hours",
+          "⚡ 24-Hour Express Delivery",
           "Print-ready HD files"
         ]
       },
@@ -88,7 +88,7 @@ export const PRICING_GROUPS: ServicePricingGroup[] = [
         features: [
           "6 Unique milestone designs",
           "Real baby photos (not templates)",
-          "Delivered within 48 hours",
+          "⚡ 24 to 48 Hours Delivery",
           "Print-ready HD files"
         ]
       },
@@ -98,7 +98,7 @@ export const PRICING_GROUPS: ServicePricingGroup[] = [
         features: [
           "12 Unique milestone designs",
           "Real baby photos (not templates)",
-          "Delivered within 48 hours",
+          "⚡ 48-Hour Priority Delivery",
           "Print-ready HD files"
         ]
       }
@@ -116,7 +116,7 @@ export const PRICING_GROUPS: ServicePricingGroup[] = [
           "🎁 FREE AI Memory Video Gift",
           "Mild scratch & dust removal",
           "Color enhancement & contrast",
-          "Delivered within 24 hours",
+          "⚡ 24-Hour Express Delivery",
           "HD digital delivery"
         ]
       },
@@ -128,7 +128,7 @@ export const PRICING_GROUPS: ServicePricingGroup[] = [
           "🎁 FREE AI Memory Video Gift",
           "Heavy scratch & tear repair",
           "Skin texture & face detail restoration",
-          "Delivered within 24 hours",
+          "⚡ 24-Hour Express Delivery",
           "HD digital delivery"
         ]
       },
@@ -139,7 +139,7 @@ export const PRICING_GROUPS: ServicePricingGroup[] = [
           "🎁 FREE AI Memory Video Gift",
           "Complete face/element reconstruction",
           "Advanced manual coloring",
-          "Delivered within 24 hours",
+          "⚡ 24 to 48 Hours Express Delivery",
           "HD digital delivery"
         ]
       }
