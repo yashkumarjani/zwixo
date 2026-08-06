@@ -21,6 +21,10 @@ export default function Showcase() {
     setActiveIndex(index);
   };
 
+  const handlePlayClick = () => {
+    setIsPlaying(true);
+  };
+
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if ((e.key === "Enter" || e.key === " ") && !isPlaying) {
       e.preventDefault();
@@ -31,7 +35,7 @@ export default function Showcase() {
   return (
     <section 
       id="showcase" 
-      className="pt-24 pb-20 bg-white dark:bg-ink text-ink dark:text-white relative overflow-hidden select-none"
+      className="pt-24 pb-20 bg-white dark:bg-ink text-ink dark:text-white relative overflow-hidden"
     >
       <div className="responsive-container max-w-5xl mx-auto px-6 relative z-10">
         
@@ -129,67 +133,66 @@ export default function Showcase() {
               </div>
             </div>
 
-            {/* Right Column: Dynamic Video Showcase Player (Strict 9:16 Aspect Ratio with Instant Click-to-Play) */}
+            {/* Right Column: Dynamic Video Showcase Player (Strict 9:16 Aspect Ratio Mobile Touch-Optimized) */}
             <div className="lg:col-span-6 flex justify-center">
               <div 
-                role="button"
-                tabIndex={0}
-                aria-label="Play ZWIXO AI Memory Video Showcase"
-                onClick={() => !isPlaying && setIsPlaying(true)}
-                onKeyDown={handleKeyDown}
-                className="w-full max-w-[310px] sm:max-w-[340px] aspect-[9/16] rounded-[32px] bg-neutral-950 border border-neutral-800 overflow-hidden relative shadow-2xl group flex items-center justify-center cursor-pointer select-none z-20 transition-all duration-300 hover:border-[#F5A623]/50 hover:shadow-[#F5A623]/10 focus-visible:ring-2 focus-visible:ring-[#F5A623] outline-none"
+                className="w-full max-w-[310px] sm:max-w-[340px] aspect-[9/16] rounded-[32px] bg-neutral-950 border border-neutral-800 overflow-hidden relative shadow-2xl group flex items-center justify-center z-20 transition-all duration-300 hover:border-[#F5A623]/50 hover:shadow-[#F5A623]/10 outline-none"
               >
-                {!isPlaying ? (
-                  /* Initial State: Poster Thumbnail + Single Perfectly Centered Glowing Play Button */
-                  <div className="w-full h-full relative flex items-center justify-center cursor-pointer group">
+                {/* Embedded YouTube Iframe - Always mounted in DOM for fast mobile readiness */}
+                {youtubeVideoId ? (
+                  <iframe
+                    src={`https://www.youtube-nocookie.com/embed/${youtubeVideoId}?playsinline=1&rel=0&modestbranding=1&enablejsapi=1${isPlaying ? "&autoplay=1" : ""}`}
+                    title="ZWIXO AI Memory Video Showcase"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="w-full h-full border-0 relative z-10"
+                  />
+                ) : (
+                  <video
+                    controls
+                    playsInline
+                    poster="/images/afterRestore.PNG"
+                    className="w-full h-full object-cover relative z-10"
+                  >
+                    <source src="/videos/memory-video.mp4" type="video/mp4" />
+                    Your browser does not support HTML5 video.
+                  </video>
+                )}
+
+                {/* Initial Touch Overlay: Fades out on tap to allow direct touch controls */}
+                {!isPlaying && (
+                  <div 
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Play ZWIXO AI Memory Video Showcase"
+                    onClick={handlePlayClick}
+                    onTouchEnd={handlePlayClick}
+                    onKeyDown={handleKeyDown}
+                    className="absolute inset-0 z-20 flex items-center justify-center cursor-pointer group bg-neutral-950/40 hover:bg-neutral-950/20 transition-all duration-300 focus-visible:ring-2 focus-visible:ring-[#F5A623] outline-none"
+                  >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img 
                       src={`https://img.youtube.com/vi/${youtubeVideoId}/hqdefault.jpg`} 
                       alt="ZWIXO AI Memory Video Showcase"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-100"
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-100 pointer-events-none"
                       onError={(e) => {
-                        // Fallback image if YouTube thumbnail is loading
                         (e.target as HTMLImageElement).src = "/images/afterRestore.PNG";
                       }}
                     />
 
-                    {/* 70% dark overlay for optimal cinematic contrast and button highlight */}
-                    <div className="absolute inset-0 bg-black/70 group-hover:bg-black/50 transition-colors duration-300" />
+                    {/* 70% dark overlay for optimal contrast */}
+                    <div className="absolute inset-0 bg-black/70 group-hover:bg-black/50 transition-colors duration-300 pointer-events-none" />
 
-                    {/* Single 100% Perfectly Centered Glowing Saffron Play Button */}
-                    <div className="absolute inset-0 flex items-center justify-center z-30">
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#F5A623] text-ink flex items-center justify-center shadow-2xl shadow-[#F5A623]/50 ring-4 ring-[#F5A623]/20 group-hover:scale-110 group-active:scale-95 transition-all duration-300">
-                        <svg 
-                          className="w-8 h-8 sm:w-10 sm:h-10 fill-current translate-x-0.5 text-neutral-950" 
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </div>
+                    {/* Glowing Saffron Play Button */}
+                    <div className="relative z-30 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#F5A623] text-ink flex items-center justify-center shadow-2xl shadow-[#F5A623]/50 ring-4 ring-[#F5A623]/20 group-hover:scale-110 group-active:scale-95 transition-all duration-300 pointer-events-none">
+                      <svg 
+                        className="w-8 h-8 sm:w-10 sm:h-10 fill-current translate-x-0.5 text-neutral-950" 
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
                     </div>
                   </div>
-                ) : (
-                  /* Active State: Responsive YouTube Embed Video Player */
-                  youtubeVideoId ? (
-                    <iframe
-                      src={`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1&controls=1&modestbranding=1&rel=0`}
-                      title="ZWIXO AI Memory Video Showcase"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full border-0 relative z-30 cursor-pointer"
-                    />
-                  ) : (
-                    <video
-                      controls
-                      autoPlay
-                      playsInline
-                      poster="/images/afterRestore.PNG"
-                      className="w-full h-full object-cover relative z-30 cursor-pointer"
-                    >
-                      <source src="/videos/memory-video.mp4" type="video/mp4" />
-                      Your browser does not support HTML5 video.
-                    </video>
-                  )
                 )}
               </div>
             </div>
