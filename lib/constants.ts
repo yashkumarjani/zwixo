@@ -24,6 +24,13 @@ export const SHOWCASE_ITEMS: ShowcaseExample[] = [
     afterImg: "/images/afterBaby.PNG",
     beforeLabel: "Raw Photo",
     afterLabel: "Milestone"
+  },
+  {
+    title: "Product marketing",
+    beforeImg: "/images/beforeProduct.jpg",
+    afterImg: "/images/afterProduct.jpg",
+    beforeLabel: "Raw Phone Photo",
+    afterLabel: "Studio Poster"
   }
 ];
 
@@ -144,6 +151,44 @@ export const PRICING_GROUPS: ServicePricingGroup[] = [
         ]
       }
     ]
+  },
+  {
+    id: "product-marketing",
+    label: "Product Marketing",
+    emoji: "🛍️",
+    tiers: [
+      {
+        name: "Starter Product Pack",
+        price: "₹1,999",
+        features: [
+          "3 Full HD Product Marketing Posters",
+          "🎁 1 FREE 10s Full HD AI Video Reel",
+          "⚡ 24-Hour Express Delivery",
+          "Full HD Print-Ready Files"
+        ]
+      },
+      {
+        name: "Growth Promo Pack",
+        price: "₹3,499",
+        isPopular: true,
+        features: [
+          "6 Full HD Product Posters / Offer Banners",
+          "🎁 2 FREE 10s Full HD AI Video Reels",
+          "⚡ 24 to 48 Hours Delivery",
+          "1 Revision per design + Master Files"
+        ]
+      },
+      {
+        name: "Pro Business Bundle",
+        price: "₹5,499",
+        features: [
+          "12 Full HD Product Posters / Offer Banners",
+          "🎁 3 FREE 10s Full HD AI Video Reels",
+          "⚡ 48-Hour Priority Delivery",
+          "Flexible monthly delivery schedule"
+        ]
+      }
+    ]
   }
 ];
 
@@ -161,6 +206,11 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     quote: "Baby milestone cards were so stunning, better than any automated app templates!",
     author: "Sneha P.",
+    location: "Ahmedabad",
+  },
+  {
+    quote: "ZWIXO created Full HD marketing posters & AI video reel ads for my food brand. Sales jumped 3X!",
+    author: "Vikram R.",
     location: "Ahmedabad",
   },
   {
@@ -192,10 +242,12 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export interface ServicesData {
   id: string;
-  iconName: "sparkles" | "heart" | "baby";
+  iconName: "sparkles" | "heart" | "baby" | "bag";
+  tagBadge: string;
   title: string;
   description: string;
   benefit: string;
+  waText: string;
   gridClass: string;
 }
 
@@ -203,25 +255,41 @@ export const SERVICES: ServicesData[] = [
   {
     id: "photo-restoration",
     iconName: "sparkles",
-    title: "Photo Restoration + Free AI Video",
-    description: "Breathe new life into torn, faded, or water-damaged photographs. Every restoration includes a 100% FREE AI Animated Memory Video bringing your portrait to life.",
-    benefit: "From a cracked scan to a living animated memory.",
-    gridClass: "bento-area-a min-h-[280px]",
+    tagBadge: "🎁 FREE AI Memory Video",
+    title: "Photo Restoration & Memory Video",
+    description: "Breathe new life into torn, faded, or damaged family photographs. Every restoration includes a 100% FREE AI Animated Memory Video.",
+    benefit: "Turn cracked scans into living animated memories.",
+    waText: "Hi ZWIXO, I want to restore a photo and get the FREE AI Memory Video!",
+    gridClass: "bento-area-a",
   },
   {
     id: "wedding-posters",
     iconName: "heart",
-    title: "Wedding Countdown",
-    description: "Transform raw couple portraits into elegant, customized countdown posters delivered daily on WhatsApp.",
-    benefit: "Celebrate your love story day by day.",
-    gridClass: "bento-area-b min-h-[160px]",
+    tagBadge: "💖 Celebration Hype",
+    title: "Wedding Countdown Posters",
+    description: "Transform raw couple portraits into elegant, customized countdown posters delivered daily on WhatsApp to build wedding excitement.",
+    benefit: "Build social hype for your big wedding day.",
+    waText: "Hi ZWIXO, I want to inquire about Wedding Countdown Posters!",
+    gridClass: "bento-area-b",
   },
   {
     id: "baby-cards",
     iconName: "baby",
-    title: "Baby Milestones",
+    tagBadge: "👶 Milestone Keepsakes",
+    title: "Baby Milestone Cards",
     description: "Document every adorable first smile, roll, and step with bespoke milestone cards featuring your real baby photos.",
-    benefit: "Cherish their precious early steps forever.",
-    gridClass: "bento-area-c min-h-[160px]",
+    benefit: "Preserve childhood's most precious milestones.",
+    waText: "Hi ZWIXO, I want to order Baby Milestone Cards!",
+    gridClass: "bento-area-c",
+  },
+  {
+    id: "product-marketing",
+    iconName: "bag",
+    tagBadge: "🎁 FREE AI Reel Ads",
+    title: "Product Marketing & AI Video",
+    description: "Transform raw product photos into Full HD Marketing Posters & 10s AI Video Reel Ads to explode your business sales.",
+    benefit: "Turn product photos into high-converting reel ads.",
+    waText: "Hi ZWIXO, I want to get Product Marketing Posters & FREE AI Video Reels for my business!",
+    gridClass: "bento-area-d",
   }
 ];

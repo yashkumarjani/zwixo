@@ -6,7 +6,7 @@ import { Check, MessageSquare } from "lucide-react";
 import type { PricingCardProps } from "../types";
 
 export default function PricingCard({ tier, activePricingLabel, priceUnit }: PricingCardProps) {
-  const waMessage = `Hi, I want to order the ${tier.name} (${activePricingLabel}) package.`;
+  const waMessage = `Hi ZWIXO, I want to order the ${tier.name} (${activePricingLabel}) package.`;
   const waButtonLabel = `Order ${tier.name} on WhatsApp`;
 
   return (

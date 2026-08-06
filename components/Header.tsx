@@ -158,7 +158,7 @@ export default function Header() {
 
             {/* 2026 Fix: Outlined small "Order Now" CTA button styling */}
             <a
-              href={`https://wa.me/918320870517?text=${encodeURIComponent("Hi, I want to order a design package.")}`}
+              href={`https://wa.me/918320870517?text=${encodeURIComponent("Hi ZWIXO, I want to order a design package.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center justify-center text-sm px-4 py-1.5 rounded-full border border-[#F5A623] text-[#F5A623] hover:bg-[#F5A623] hover:text-white transition-all duration-200 font-semibold focus-visible:ring-2 focus-visible:ring-[#F5A623] focus-visible:ring-offset-2 cursor-pointer"
@@ -226,7 +226,7 @@ export default function Header() {
 
             <div className="mt-12">
               <a
-                href={`https://wa.me/918320870517?text=${encodeURIComponent("Hi, I want to order a design package.")}`}
+                href={`https://wa.me/918320870517?text=${encodeURIComponent("Hi ZWIXO, I want to order a design package.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3 bg-[#F5A623] text-white hover:bg-amber-500 text-sm font-semibold rounded-full flex items-center justify-center gap-2 shadow-sm focus-visible:ring-2 focus-visible:ring-[#F5A623] focus-visible:ring-offset-2 min-h-[44px] cursor-pointer"

@@ -22,7 +22,7 @@ export default function Footer() {
 
         {/* WhatsApp Button (Variant A) */}
         <a
-          href={`https://wa.me/918320870517?text=${encodeURIComponent("Hi, I want to order a design package.")}`}
+          href={`https://wa.me/918320870517?text=${encodeURIComponent("Hi ZWIXO, I want to order a design package.")}`}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#F5A623] text-white px-6 py-3 rounded-full font-semibold hover:bg-amber-500 transition-colors inline-flex items-center justify-center focus-visible:ring-2 focus-visible:ring-[#F5A623] focus-visible:ring-offset-2 cursor-pointer text-sm mb-16"

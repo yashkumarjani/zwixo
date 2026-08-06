@@ -11,6 +11,24 @@ export default function Pricing() {
   const [activeCardIndex, setActiveCardIndex] = useState(0);
   const pricingContainerRef = useRef<HTMLDivElement>(null);
 
+  React.useEffect(() => {
+    const handleSwitchTab = (e: Event) => {
+      const customEvent = e as CustomEvent<string>;
+      if (customEvent.detail) {
+        const found = PRICING_GROUPS.find((g) => g.id === customEvent.detail);
+        if (found) {
+          setActiveGroup(customEvent.detail);
+          setActiveCardIndex(0);
+          if (pricingContainerRef.current) {
+            pricingContainerRef.current.scrollLeft = 0;
+          }
+        }
+      }
+    };
+    window.addEventListener("switchPricingTab", handleSwitchTab);
+    return () => window.removeEventListener("switchPricingTab", handleSwitchTab);
+  }, []);
+
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     const target = e.currentTarget;
     const maxScroll = target.scrollWidth - target.clientWidth;
@@ -27,6 +45,7 @@ export default function Pricing() {
       case "wedding-posters": return "/ poster design";
       case "baby-cards": return "/ card design";
       case "photo-restoration": return "/ photo";
+      case "product-marketing": return "/ package";
       default: return "/ package";
     }
   };

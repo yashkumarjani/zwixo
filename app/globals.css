@@ -190,26 +190,21 @@ html.lenis, html.lenis body {
   }
 }
 
-/* Redesigned 2026 Bento Grid areas configuration for Services bento grid */
+/* Redesigned 2026 Bento Grid configuration for 4 Core Services */
 .services-bento-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: 
-    "a"
-    "b"
-    "c";
   gap: 1.5rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .services-bento-grid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      "a a b"
-      "a a c";
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
   }
 }
-.bento-area-a { grid-area: a; }
-.bento-area-b { grid-area: b; }
-.bento-area-c { grid-area: c; }
+
+.bento-area-a { grid-column: span 1; }
+.bento-area-b { grid-column: span 1; }
+.bento-area-c { grid-column: span 1; }
+.bento-area-d { grid-column: span 1; }

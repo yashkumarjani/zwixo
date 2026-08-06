@@ -52,15 +52,15 @@ export default function Showcase() {
           </p>
         </div>
 
-        {/* Sliders Grid: Mobile Snap-scroll with peeking, Desktop 3-column Grid */}
+        {/* Sliders Grid: Mobile Snap-scroll with peeking, Desktop 4-column Grid */}
         <div 
           onScroll={handleScroll}
-          className="flex md:grid md:grid-cols-3 overflow-x-auto md:overflow-visible snap-x snap-mandatory gap-5 scrollbar-none pb-4 md:pb-0 px-6 -mx-6 md:px-0 md:mx-0"
+          className="flex md:grid md:grid-cols-2 lg:grid-cols-4 overflow-x-auto md:overflow-visible snap-x snap-mandatory gap-5 scrollbar-none pb-4 md:pb-0 px-6 -mx-6 md:px-0 md:mx-0"
         >
           {SHOWCASE_ITEMS.map((item) => (
             <div 
               key={item.title}
-              className="snap-center shrink-0 w-[80vw] xs:w-[75vw] md:w-auto flex flex-col items-center pl-1 first:pl-0 last:pr-1"
+              className="snap-center shrink-0 w-[80vw] xs:w-[75vw] md:w-full flex flex-col items-center pl-1 first:pl-0 last:pr-1"
             >
               <CompareSlider {...item} />
               
@@ -123,7 +123,7 @@ export default function Showcase() {
 
               <div className="pt-4">
                 <a
-                  href={`https://wa.me/918320870517?text=${encodeURIComponent("Hi, I want to restore a photo and get the FREE AI Memory Video!")}`}
+                  href={`https://wa.me/918320870517?text=${encodeURIComponent("Hi ZWIXO, I want to restore a photo and get the FREE AI Memory Video!")}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-[#F5A623] text-ink font-bold text-xs sm:text-sm px-6 py-3 rounded-full hover:bg-amber-400 transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-[#F5A623] focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900"

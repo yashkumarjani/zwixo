@@ -94,7 +94,7 @@ export default function Hero() {
             {/* CTAs: Primary Saffron fill, Secondary text link */}
             <div className="flex flex-row items-center gap-6 mt-2">
               <a
-                href={`https://wa.me/918320870517?text=${encodeURIComponent("Hi, I want to order a design package.")}`}
+                href={`https://wa.me/918320870517?text=${encodeURIComponent("Hi ZWIXO, I want to order a design package.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#F5A623] text-white px-6 py-3 rounded-full font-semibold hover:bg-amber-500 transition-colors inline-flex items-center justify-center focus-visible:ring-2 focus-visible:ring-[#F5A623] focus-visible:ring-offset-2 cursor-pointer text-sm"

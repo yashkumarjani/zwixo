@@ -128,7 +128,7 @@ export default function CompareSlider({ beforeImg, afterImg, beforeLabel, afterL
   return (
     <div
       ref={containerRef}
-      className="relative aspect-[9/16] w-full max-h-[520px] rounded-[32px] overflow-hidden border border-neutral-100 dark:border-neutral-900 shadow-xl cursor-ew-resize touch-none select-none bg-neutral-100 dark:bg-neutral-900"
+      className="relative aspect-[9/16] w-full rounded-[32px] overflow-hidden border border-neutral-200/80 dark:border-neutral-850 shadow-xl cursor-ew-resize touch-none select-none bg-neutral-950"
       onMouseDown={(e) => {
         e.preventDefault();
         onDragStart(e.clientX, e.clientY);

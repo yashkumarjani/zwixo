@@ -49,7 +49,7 @@ export default function MobileStickyCTA() {
       className="fixed bottom-5 left-4 right-4 z-40 md:hidden flex justify-center pointer-events-none"
     >
       <a
-        href={`https://wa.me/918320870517?text=${encodeURIComponent("Hi, I want to order a design package.")}`}
+        href={`https://wa.me/918320870517?text=${encodeURIComponent("Hi ZWIXO, I want to order a design package.")}`}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Order on WhatsApp"
