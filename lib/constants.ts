@@ -27,8 +27,8 @@ export const SHOWCASE_ITEMS: ShowcaseExample[] = [
   },
   {
     title: "Product marketing",
-    beforeImg: "/images/beforeProduct.jpg",
-    afterImg: "/images/afterProduct.jpg",
+    beforeImg: "/images/beforeProductV5.jpg",
+    afterImg: "/images/afterProductV5.jpg",
     beforeLabel: "Raw Phone Photo",
     afterLabel: "Studio Poster"
   }
