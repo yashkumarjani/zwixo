@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: "ZWIXO | India's WhatsApp-first Memory & Celebration Studio",
   description: "ZWIXO is India's premium WhatsApp-first Memory & Celebration Studio. We restore family photos, design wedding countdowns, and Baby Milestone cards in Ahmedabad.",
   keywords: ["ZWIXO", "Zwixo", "ZWIXO Memory Studio", "Zwixo Studio", "ZWIXO Photo Restoration", "Zwixo Countdown", "photo restoration", "wedding countdown posters", "baby milestone cards", "creative edit", "wedding website", "Ahmedabad studio"],
-  authors: [{ name: "Yash & Gautami" }],
+  authors: [{ name: "Gautami" }],
   icons: {
     icon: "/icon.svg",
     apple: "/icon.svg",

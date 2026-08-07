@@ -7,6 +7,7 @@ import Image from "next/image";
 import FloatingOrb from "./FloatingOrb";
 import SpringCounter from "./SpringCounter";
 import { useScrollTo } from "../hooks/useScrollTo";
+import { Sparkles, MessageSquare } from "lucide-react";
 
 export default function Hero() {
   const scrollTo = useScrollTo();
@@ -15,21 +16,24 @@ export default function Hero() {
   return (
     <section 
       id="hero" 
-      className="relative min-h-screen flex flex-col justify-between overflow-hidden bg-white dark:bg-ink select-none pt-24 pb-8 transition-colors duration-300"
+      className="relative min-h-[90vh] lg:min-h-screen flex flex-col justify-between overflow-hidden bg-white dark:bg-ink select-none pt-28 pb-8 transition-colors duration-300"
     >
-      {/* Subtle Dot Grid overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(#e5e5e7_1px,transparent_1px)] dark:bg-[radial-gradient(#2c2c2e_1px,transparent_1px)] [background-size:32px_32px] opacity-40 dark:opacity-60 pointer-events-none z-0"></div>
+      {/* Ambient Radial Background Glows */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#F5A623]/10 rounded-full blur-3xl pointer-events-none z-0" />
+
+      {/* Subtle Dot Grid Overlay */}
+      <div className="absolute inset-0 bg-[radial-gradient(#e5e5e7_1px,transparent_1px)] dark:bg-[radial-gradient(#2c2c2e_1px,transparent_1px)] [background-size:32px_32px] opacity-40 dark:opacity-60 pointer-events-none z-0" />
 
       <div className="responsive-container flex-1 flex items-center justify-center relative z-10 w-full max-w-5xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
           
-          {/* Right Column: Moves above text on tablet (sm+), hidden on mobile, has warm tint background */}
-          <div className="hidden sm:flex lg:order-2 w-full h-[350px] lg:h-[600px] items-center justify-center relative select-none z-10 p-6">
+          {/* Right Column: Floating 3D Interactive Canvas + Live Studio Card */}
+          <div className="hidden sm:flex lg:order-2 w-full h-[360px] lg:h-[540px] items-center justify-center relative select-none z-10 p-4">
             <FloatingOrb />
           </div>
 
-          {/* Mobile-only Static Image: shown below 640px viewport */}
-          <div className="flex sm:hidden w-full max-w-[200px] aspect-[2/3] mx-auto relative rounded-2xl overflow-hidden mb-6 z-10">
+          {/* Mobile-only Preview Image (shown below 640px) */}
+          <div className="flex sm:hidden w-full max-w-[200px] aspect-[2/3] mx-auto relative rounded-2xl overflow-hidden mb-4 z-10 shadow-lg">
             <Image
               src="/images/iphone_orange_mockup.png"
               alt="Zwixo Mobile Preview"
@@ -40,88 +44,97 @@ export default function Hero() {
             />
           </div>
 
-          {/* Left Column: Headline copy */}
+          {/* Left Column: Core Value Proposition */}
           <div className="lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start w-full">
             
-            {/* Level 1 (eyebrow badge): 11px uppercase mb-4, split into live badge + plain subtitle */}
-            <div className="mb-4">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-900 text-[11px] font-extrabold text-neutral-400 dark:text-neutral-500 uppercase tracking-widest">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#F5A623] animate-pulse"></span>
-                Live studio
+            {/* Live Studio Eyebrow Badge */}
+            <div className="mb-4 flex items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 text-[11px] font-extrabold text-neutral-600 dark:text-neutral-300 uppercase tracking-widest shadow-xs">
+                <span className="w-2 h-2 rounded-full bg-[#F5A623] animate-pulse" />
+                Live Studio • Ahmedabad
               </span>
-              <div className="text-xs text-neutral-500 dark:text-neutral-400 font-medium tracking-wide mt-2">
-                WhatsApp-first • Ahmedabad
-              </div>
             </div>
 
-            {/* Level 2 (wordmark): clamp(3.5rem, 8vw, 7rem) font-black tracking-tighter leading-none */}
+            {/* ZWIXO Main Wordmark */}
             <h1 
               className="font-black tracking-tighter text-ink dark:text-white leading-none select-none -tracking-[0.04em]"
-              style={{ fontSize: "clamp(3.5rem, 8vw, 7rem)" }}
+              style={{ fontSize: "clamp(3.5rem, 8vw, 6.5rem)" }}
             >
               ZWI<span className="text-[#F5A623]">X</span>O
             </h1>
 
-            {/* Level 3 (tagline): clamp(1rem, 2vw, 1.25rem) font-normal text-neutral-500 mt-3 */}
+            {/* Tagline Subtitle */}
             <p 
-              className="font-normal text-neutral-500 dark:text-neutral-400 mt-3 mb-6 max-w-xl leading-relaxed"
+              className="font-normal text-neutral-600 dark:text-neutral-300 mt-4 mb-6 max-w-xl leading-relaxed text-balance"
               style={{ fontSize: "clamp(1rem, 2vw, 1.25rem)" }}
             >
-              Restore memories. Design celebrations. Delivered in 48h via WhatsApp.
+              Photo Restoration, Product Marketing & Celebration Art — Restored & Designed directly on WhatsApp.
             </p>
 
-            {/* Stat counters: wrapped in flex row with vertical divider */}
-            <div className="flex items-center gap-6 my-6 text-left">
+            {/* Stat Counters: 1,250+ Restored, 24h Delivery, 4.9 Rating */}
+            <div className="flex items-center gap-5 sm:gap-8 my-4 text-left">
               <div className="flex flex-col">
-                <span className="text-2xl font-bold text-neutral-900 dark:text-white">
+                <span className="text-2xl font-black text-ink dark:text-white">
                   <SpringCounter value={1250} />+
                 </span>
-                <span className="text-xs text-neutral-500 dark:text-neutral-400">
-                  photos restored
+                <span className="text-xs font-medium text-neutral-500 dark:text-neutral-400">
+                  Photos Restored
                 </span>
               </div>
               <div className="w-px h-8 bg-neutral-200 dark:bg-neutral-800" />
               <div className="flex flex-col">
-                <span className="text-2xl font-bold text-neutral-900 dark:text-white">
-                  <SpringCounter value={48} />h
+                <span className="text-2xl font-black text-ink dark:text-white">
+                  <SpringCounter value={24} />h
                 </span>
-                <span className="text-xs text-neutral-500 dark:text-neutral-400">
-                  avg delivery
+                <span className="text-xs font-medium text-neutral-500 dark:text-neutral-400">
+                  Express Delivery
+                </span>
+              </div>
+              <div className="w-px h-8 bg-neutral-200 dark:bg-neutral-800" />
+              <div className="flex flex-col">
+                <span className="text-2xl font-black text-[#F5A623]">
+                  4.9 ★
+                </span>
+                <span className="text-xs font-medium text-neutral-500 dark:text-neutral-400">
+                  200+ Client Reviews
                 </span>
               </div>
             </div>
 
-            {/* CTAs: Primary Saffron fill, Secondary text link */}
-            <div className="flex flex-row items-center gap-6 mt-2">
+            {/* Primary & Secondary Action CTAs */}
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mt-4 w-full sm:w-auto">
               <a
                 href={`https://wa.me/918320870517?text=${encodeURIComponent("Hi ZWIXO, I want to order a design package.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#F5A623] text-white px-6 py-3 rounded-full font-semibold hover:bg-amber-500 transition-colors inline-flex items-center justify-center focus-visible:ring-2 focus-visible:ring-[#F5A623] focus-visible:ring-offset-2 cursor-pointer text-sm"
+                className="w-full sm:w-auto bg-[#F5A623] text-ink font-bold px-7 py-3.5 rounded-full hover:bg-amber-400 transition-all duration-200 inline-flex items-center justify-center gap-2 focus-visible:ring-2 focus-visible:ring-[#F5A623] focus-visible:ring-offset-2 cursor-pointer text-sm shadow-md active:scale-95"
                 aria-label="Order on WhatsApp"
               >
-                Order on WhatsApp
+                <MessageSquare className="w-4 h-4 fill-current" />
+                <span>Order on WhatsApp</span>
               </a>
 
               <button
-                onClick={() => scrollTo("services")}
-                className="text-neutral-600 dark:text-neutral-400 underline-offset-4 hover:underline text-sm font-medium cursor-pointer"
+                onClick={() => scrollTo("showcase")}
+                className="w-full sm:w-auto text-neutral-600 dark:text-neutral-300 hover:text-ink dark:hover:text-white px-6 py-3.5 rounded-full border border-neutral-200 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700 text-sm font-semibold transition-all duration-200 cursor-pointer inline-flex items-center justify-center gap-1.5"
               >
-                See Our Work
+                <Sparkles className="w-4 h-4 text-[#F5A623]" />
+                <span>See Showcase</span>
               </button>
             </div>
+
           </div>
 
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="w-full flex justify-center pb-4 z-10">
+      {/* Scroll Indicator */}
+      <div className="w-full flex justify-center pb-2 z-10">
         <button 
           onClick={() => scrollTo("services")}
           className="group text-neutral-400 hover:text-[#F5A623] transition-colors cursor-pointer flex flex-col items-center gap-2 text-[10px] font-black uppercase tracking-widest focus-visible:ring-2 focus-visible:ring-[#F5A623] focus-visible:ring-offset-2 rounded-lg p-1"
         >
-          <span>Scroll Down</span>
+          <span>Explore Services</span>
           <div className="w-5 h-9 rounded-full border border-neutral-300 dark:border-neutral-700 p-1 flex justify-center">
             <m.div 
               initial={{ y: 0 }}

@@ -12,7 +12,7 @@ Use this exact context to write high-converting copy, design storyboard visual g
 ## 1. Brand Identity & core concept
 * **Brand Name:** ZWIXO (pronounced *Zwi-xo*)
 * **Tagline:** Snap it. Glow it. Deliver it.
-* **Core Value Proposition:** ZWIXO is a premium, WhatsApp-first Memory & Celebration Studio run by designers Yash & Gautami in Ahmedabad, India. We professionally restore vintage family photographs, design customized wedding countdown posters, and curate bespoke baby milestone cards.
+* **Core Value Proposition:** ZWIXO is a premium, WhatsApp-first Memory & Celebration Studio run by designer Gautami in Ahmedabad, India. We professionally restore vintage family photographs, design customized wedding countdown posters, and curate bespoke baby milestone cards.
 * **The ZWIXO USP (Unique Selling Proposition):** 
   * **No Generic Templates:** Unlike automated apps, everything is manually hand-crafted by professional designers.
   * **WhatsApp-First UX:** 100% friction-free. Customers order, share photos, review drafts, and get final HD files delivered in 30 seconds directly on WhatsApp.
@@ -70,7 +70,7 @@ When planning posters, visuals, or video storyboards, strictly follow these visu
 * **Tone:** Emotional, premium, warm, nostalgic, direct, and trust-oriented.
 * **Language:** A mix of clean English, or warm Hinglish (for Indian local target ads).
 * **Keywords to Use:** Hand-crafted, No automated templates, WhatsApp-first, Real Memories, Nostalgia, Ahmedabad Design Studio.
-* **Call to Action (CTA):** "Order in 30 seconds on WhatsApp", "Chat with Yash & Gautami".
+* **Call to Action (CTA):** "Order in 30 seconds on WhatsApp", "Chat with Gautami".
 
 ---
 

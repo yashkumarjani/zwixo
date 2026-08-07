@@ -8,6 +8,8 @@ import { useScrollTo } from "../hooks/useScrollTo";
 import { NAV_ITEMS } from "../lib/constants";
 import { getDrawerVariants } from "../lib/animations";
 
+import TopAnnouncement from "./TopAnnouncement";
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -75,7 +77,7 @@ export default function Header() {
         }
       }
     };
-    
+
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isMobileMenuOpen]);
@@ -88,15 +90,16 @@ export default function Header() {
   return (
     <>
       <header
-        // 2026 Fix: Header on scroll = bg-white/80 dark:bg-ink/80 backdrop-blur-md border-neutral-100 dark:border-neutral-800
-        // At top = bg-transparent, no border
         className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-200 ${
           isScrolled || isMobileMenuOpen
-            ? "bg-white/80 dark:bg-ink/80 backdrop-blur-md border-b border-neutral-100 dark:border-neutral-900 py-3.5 shadow-sm"
-            : "bg-transparent py-6 border-b border-transparent"
+            ? "bg-white/95 dark:bg-ink/95 backdrop-blur-md border-b border-neutral-200/60 dark:border-neutral-850 shadow-sm"
+            : "bg-white/80 dark:bg-ink/80 backdrop-blur-sm border-b border-neutral-100 dark:border-neutral-900"
         }`}
       >
-        <div className="responsive-container flex items-center justify-between">
+        {/* Integrated Top Limited-Time Announcement Ticker */}
+        {!isScrolled && <TopAnnouncement />}
+
+        <div className="responsive-container flex items-center justify-between py-3.5 sm:py-4">
           {/* Logo 2026 Fix: ZWI[X]O brackets removed, X in saffron with tight letter-spacing */}
           <button
             onClick={() => {
@@ -107,12 +110,12 @@ export default function Header() {
             aria-label="ZWIXO Homepage"
           >
             <svg viewBox="0 0 76 76" className="w-9 h-9 shrink-0 transition-transform duration-300 hover:rotate-6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect width="76" height="76" rx="18" fill="#1C1C1E"/>
+              <rect width="76" height="76" rx="18" className="fill-neutral-950 dark:fill-[#1C1C1E]"/>
               <rect x="14" y="16" width="48" height="10" rx="5" fill="#F5A623"/>
               <polygon points="52,26 62,26 24,50 14,50" fill="#F5A623"/>
               <rect x="14" y="50" width="48" height="10" rx="5" fill="#F5A623"/>
-              <rect x="50" y="54" width="12" height="8" rx="2" fill="#1C1C1E"/>
-              <polygon points="50,56 68,58 50,60" fill="#1C1C1E"/>
+              <rect x="50" y="54" width="12" height="8" rx="2" className="fill-neutral-950 dark:fill-[#1C1C1E]"/>
+              <polygon points="50,56 68,58 50,60" className="fill-neutral-950 dark:fill-[#1C1C1E]"/>
             </svg>
             <div className="flex flex-col">
               <span className="text-2xl font-black text-ink dark:text-white font-sans leading-none -tracking-[0.04em]">

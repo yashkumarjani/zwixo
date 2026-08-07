@@ -35,6 +35,17 @@ const Pricing = dynamic(() => import("../components/Pricing"), {
   ),
 });
 
+const FAQ = dynamic(() => import("../components/FAQ"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full pt-20 pb-20 bg-white dark:bg-ink">
+      <div className="responsive-container max-w-4xl mx-auto px-6">
+        <div className="w-full min-h-[500px] bg-neutral-100 dark:bg-neutral-900/50 animate-pulse rounded-[32px] border border-neutral-200 dark:border-neutral-800" />
+      </div>
+    </div>
+  ),
+});
+
 const Testimonials = dynamic(() => import("../components/Testimonials"), {
   ssr: false,
   loading: () => (
@@ -45,6 +56,8 @@ const Testimonials = dynamic(() => import("../components/Testimonials"), {
     </div>
   ),
 });
+
+import TrustTicker from "../components/TrustTicker";
 
 export default function Page() {
   return (
@@ -65,14 +78,17 @@ export default function Page() {
         <Hero />
       </ErrorBoundary>
 
-      {/* Section 2: Services */}
-      <ErrorBoundary sectionName="Services">
-        <Services />
-      </ErrorBoundary>
+      {/* Trust & Quality Infinite Marquee Ribbon */}
+      <TrustTicker />
 
-      {/* Section 3: Before/After Showcase */}
+      {/* Section 2: Before/After Showcase (Visual Proof First) */}
       <ErrorBoundary sectionName="Showcase">
         <Showcase />
+      </ErrorBoundary>
+
+      {/* Section 3: 4 Core Services Bento Grid */}
+      <ErrorBoundary sectionName="Services">
+        <Services />
       </ErrorBoundary>
 
       {/* Section 4: Pricing */}
@@ -80,7 +96,12 @@ export default function Page() {
         <Pricing />
       </ErrorBoundary>
 
-      {/* Section 5: Testimonials */}
+      {/* Section 5: Customer FAQ Accordion */}
+      <ErrorBoundary sectionName="FAQ">
+        <FAQ />
+      </ErrorBoundary>
+
+      {/* Section 6: Testimonials */}
       <ErrorBoundary sectionName="Testimonials">
         <Testimonials />
       </ErrorBoundary>

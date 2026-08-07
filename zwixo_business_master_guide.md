@@ -11,7 +11,7 @@
 * **Core Brand Motto:** *"Every celebration deserves beautiful memories. Every memory deserves Zwixo."*
 * **Brand Philosophy:** *"We reject AI presets. We curate restored memories, celebrations, product marketing, and wedding designs with meticulous studio craftsmanship."*
 * **Business Concept:** India's premier **WhatsApp-First Memory & Celebration Studio**. Specialized in bespoke hand-crafted digital photo restorations, custom wedding countdown daily posters, baby milestone cards, and product marketing AI video ads.
-* **Founders & Core Team:** Yash & Gautami (Professional Graphic Designers & Digital Artists based in Ahmedabad, Gujarat, India).
+* **Founders & Core Team:** Gautami (Professional Graphic Designer & Digital Artist based in Ahmedabad, Gujarat, India).
 * **Official HQ Location:** Ahmedabad, Gujarat, India.
 * **Official WhatsApp Order Line:** [+91 8320870517](https://wa.me/918320870517)
 * **Direct WhatsApp Order Link:** `https://wa.me/918320870517`
@@ -28,7 +28,7 @@
 2. **🛍️ Product Marketing & AI Video Reel Ads (B2B Growth Engine):**
    * Small businesses, D2C brands, food sellers, cloud kitchens, and clothing boutiques send raw product photos over WhatsApp. ZWIXO transforms them into Full HD Studio Marketing Posters + 10-second Full HD AI Product Video Reel Ads using a proprietary ChatGPT + ComfyUI enhancement pipeline.
 3. **100% Hand-Crafted Studio Craftsmanship (No Automated AI Distortion):**
-   * Automated apps aur generic AI face generators facial features ko distortion, weird textures ya unnatural plastic smoothing de dete hain. ZWIXO me Yash & Gautami har photo restoration, color correction, aur poster layout ko manually Photoshop & Illustrator me pixel-by-pixel reconstruct karte hain.
+   * Automated apps aur generic AI face generators facial features ko distortion, weird textures ya unnatural plastic smoothing de dete hain. ZWIXO me Gautami har photo restoration, color correction, aur poster layout ko manually Photoshop & Illustrator me pixel-by-pixel reconstruct karti hain.
 4. **Zero-Friction WhatsApp-First UX (30-Second Ordering):**
    * Customer ko koi complex sign-up form, password, ya app download nahi karna hai. Customer direct WhatsApp par image bhejta hai, package choose karta hai, draft review karta hai, aur 30 seconds me high-definition digital file receive karta hai.
 5. **Authentic Emotion & Facial Detail Preservation:**
@@ -102,7 +102,7 @@
 flowchart TD
     A[Customer discovers ZWIXO on Instagram / Web] --> B[Clicks 'Order on WhatsApp' link]
     B --> C[Automatic Pre-filled WhatsApp Message Sent]
-    C --> D[Yash / Gautami inspects submitted photo / product raw image]
+    C --> D[Gautami inspects submitted photo / product raw image]
     D --> E[Recommend exact Package Tier & share UPI/Payment QR]
     E --> F[Customer pays & confirms order]
     F --> G[Studio Hand-Crafting / ChatGPT + ComfyUI Pipeline]
@@ -153,7 +153,7 @@ flowchart TD
 
 ### Objection Handling Playbook:
 * **Objection 1: "AI tools (Remini, Canva) free/saste me kar dete hain, aap charge kyun karte ho?"**
-  * *AI Answer Script:* "AI tools skin smoothness dekar chehre ke asli features warp aur distort kar dete hain. ZWIXO me Yash & Gautami manually har facial line aur emotion ko reconstruct karte hain without distortion, so your family member looks like themselves, not an AI robot. PLUS, ZWIXO aapko 100% FREE AI Memory Video bhi gift karta hai!"
+  * *AI Answer Script:* "AI tools skin smoothness dekar chehre ke asli features warp aur distort kar dete hain. ZWIXO me Gautami manually har facial line aur emotion ko reconstruct karti hain without distortion, so your family member looks like themselves, not an AI robot. PLUS, ZWIXO aapko 100% FREE AI Memory Video bhi gift karta hai!"
 * **Objection 2: "B2B Marketing posters aur AI Video Ads ke liye professional camera shooting chahiye?"**
   * *AI Answer Script:* "Bilkul nahi! Aap apne phone se product ki simple photo lekar WhatsApp par bhej dijiye. ZWIXO hamare ChatGPT + ComfyUI AI pipeline se usko Full HD Studio Marketing Poster aur 10s Video Reel Ad me convert kar dega."
 
@@ -198,7 +198,7 @@ flowchart TD
 
 ### B. Standard Prompt Framework for Any AI (ChatGPT/Gemini/Claude):
 When asking an AI for creative copy, ad visuals, or poster scripts, use this prompt structure:
-> *"You are the Creative Director for ZWIXO (India's premier WhatsApp-First Memory & Business Studio in Ahmedabad, run by designers Yash & Gautami). Using the ZWIXO Brand Identity [Saffron Gold #F5A623 & Deep Ink #1C1C1E, Photo Restoration, Wedding Countdowns, Baby Milestones, and Product Marketing AI Video Studio], write [Insert Task: e.g. 3 B2B Marketing Ad Scripts / 5 WhatsApp Broadcast messages]." *
+> *"You are the Creative Director for ZWIXO (India's premier WhatsApp-First Memory & Business Studio in Ahmedabad, run by designer Gautami). Using the ZWIXO Brand Identity [Saffron Gold #F5A623 & Deep Ink #1C1C1E, Photo Restoration, Wedding Countdowns, Baby Milestones, and Product Marketing AI Video Studio], write [Insert Task: e.g. 3 B2B Marketing Ad Scripts / 5 WhatsApp Broadcast messages]." *
 
 ---
 
@@ -252,4 +252,4 @@ Click the link in our bio or WhatsApp us at +91 8320870517!
 ---
 
 *Document Status: Master Centralized Source of Truth for ZWIXO*
-*Maintained by: Yash & Gautami | ZWIXO Memory & Business Studio*
+*Maintained by: Gautami | ZWIXO Memory & Business Studio*

@@ -53,14 +53,14 @@ const SERVICE_DETAILS = {
   custom: {
     title: "Custom Order / Chat",
     emoji: "💬",
-    desc: "Have a unique design request or general questions? Yash & Gautami are here to design custom celebration packages tailored exactly to your ideas.",
+    desc: "Have a unique design request or general questions? Gautami is here to design custom celebration packages tailored exactly to your ideas.",
     pricing: [
       { id: "custom", name: "Custom Project", price: "Flexible", detail: "Pricing based on your requirements" }
     ],
     defaultSelected: "custom",
     delivery: "Timeline depends on request",
-    whatsappText: () => `Hi Zwixo! I have a custom design request and would love to chat with Yash & Gautami.`,
-    ctaLabel: "Chat with Yash & Gautami",
+    whatsappText: () => `Hi Zwixo! I have a custom design request and would love to chat with Gautami.`,
+    ctaLabel: "Chat with Gautami",
   },
 };
 
@@ -374,7 +374,7 @@ function ChatWindow({ chatRef, onClose }: ChatWindowProps) {
                 className="flex flex-col items-start"
               >
                 <div className="px-4 py-2.5 rounded-[18px] rounded-tl-[4px] bg-neutral-100 dark:bg-neutral-900 text-xs text-ink dark:text-neutral-200 max-w-[85%] leading-relaxed">
-                  Hey there! 👋 Yash & Gautami here from **ZWIXO**.
+                  Hey there! 👋 Gautami here from **ZWIXO**.
                 </div>
               </m.div>
             )}

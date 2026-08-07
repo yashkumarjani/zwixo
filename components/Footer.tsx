@@ -102,7 +102,7 @@ export default function Footer() {
             <address className="not-italic text-sm font-semibold text-neutral-600 dark:text-neutral-400 leading-relaxed space-y-2">
               <p>Ahmedabad, Gujarat, India</p>
               <p className="font-bold text-ink dark:text-white">
-                Founded by Yash &amp; Gautami
+                Founded by Gautami
               </p>
               <div className="flex items-center gap-4 pt-2 font-bold text-ink dark:text-white">
                 <a
@@ -139,7 +139,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-neutral-100 dark:border-neutral-900 pt-8 text-xs font-bold text-neutral-400 dark:text-neutral-500">
           <span>&copy; 2026 Zwixo. All rights reserved.</span>
-          <span>Designed with Love in Ahmedabad by Yash &amp; Gautami.</span>
+          <span>Designed with Love in Ahmedabad by Gautami.</span>
         </div>
       </div>
     </footer>
