@@ -50,6 +50,20 @@ const SERVICE_DETAILS = {
     whatsappText: (tierName: string, tierPrice: string) => `Hi Zwixo! I'd love to order custom Baby Milestone cards - the ${tierName} (${tierPrice}) package. Please guide me.`,
     ctaLabel: "Order Milestone Cards on WhatsApp",
   },
+  product: {
+    title: "Product Marketing Posters & AI Reels",
+    emoji: "🛍️",
+    desc: "Transform raw phone product photos into Full HD Studio Marketing Posters + FREE 10s AI Product Video Reel Ads for your business.",
+    pricing: [
+      { id: "starter", name: "Starter Product Pack", price: "₹1,999", detail: "2 Studio Posters + 1 FREE 10s AI Product Reel Ad" },
+      { id: "growth", name: "Growth Promo Pack", price: "₹3,499", detail: "5 Studio Posters + 2 FREE 10s AI Product Reel Ads (Popular)" },
+      { id: "pro", name: "Pro Business Bundle", price: "₹5,499", detail: "10 Studio Posters + 3 FREE 10s AI Product Reel Ads" },
+    ],
+    defaultSelected: "growth",
+    delivery: "Delivered within 24 to 48 hours",
+    whatsappText: (tierName: string, tierPrice: string) => `Hi Zwixo! I want to order the ${tierName} (${tierPrice}) package for Product Marketing. Please guide me on sending raw photos.`,
+    ctaLabel: "Order Product Marketing via WhatsApp",
+  },
   custom: {
     title: "Custom Order / Chat",
     emoji: "💬",
@@ -79,6 +93,11 @@ const CHAT_OPTIONS = [
     label: "Baby Milestone Cards",
     emoji: "👶",
     serviceKey: "baby" as const,
+  },
+  {
+    label: "Product Marketing Posters + FREE Reel",
+    emoji: "🛍️",
+    serviceKey: "product" as const,
   },
   {
     label: "Custom Order / Chat",
@@ -387,7 +406,7 @@ function ChatWindow({ chatRef, onClose }: ChatWindowProps) {
                 className="flex flex-col items-start"
               >
                 <div className="px-4 py-2.5 rounded-[18px] rounded-tl-[4px] bg-neutral-100 dark:bg-neutral-900 text-xs text-ink dark:text-neutral-200 max-w-[85%] leading-relaxed">
-                  We design premium milestone cards, wedding countdown posters, and restore old family photos. Select a service to see details and pricing!
+                  We restore old family photos, design wedding countdowns, baby milestone cards, and product marketing AI reel ads. Select a service to see details and pricing!
                 </div>
               </m.div>
             )}
