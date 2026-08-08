@@ -147,7 +147,7 @@ export default function FloatingEmoji() {
     }
   };
 
-  // Close chat when clicking outside chatRef and mascotRef (Modeless click-outside)
+  // Close chat when clicking outside chatRef and mascotRef or pressing Escape key
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent | TouchEvent) => {
       const clickedChat = chatRef.current && chatRef.current.contains(event.target as Node);
@@ -158,13 +158,21 @@ export default function FloatingEmoji() {
       }
     };
 
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsChatOpen(false);
+      }
+    };
+
     if (isChatOpen) {
       document.addEventListener("mousedown", handleClickOutside);
       document.addEventListener("touchstart", handleClickOutside);
+      window.addEventListener("keydown", handleKeyDown);
     }
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("touchstart", handleClickOutside);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isChatOpen]);
 
@@ -357,18 +365,21 @@ function ChatWindow({ chatRef, onClose }: ChatWindowProps) {
       className="fixed bottom-20 left-4 right-4 xs:left-auto xs:right-6 xs:w-[340px] sm:left-auto sm:right-6 sm:w-[340px] md:bottom-24 md:left-auto md:right-8 md:w-[340px] lg:left-auto lg:right-12 lg:w-[340px] z-50 flex flex-col overflow-hidden rounded-[24px] border border-neutral-200/60 dark:border-neutral-800/70 bg-white/95 dark:bg-[#1C1C1E]/95 backdrop-blur-xl shadow-2xl transition-colors duration-300 max-h-[70vh]"
     >
       {/* Header */}
-      <div className="relative bg-gradient-to-r from-[#F5A623] to-[#D48C1B] px-4.5 py-4 text-white flex items-center justify-between">
+      <div className="relative bg-gradient-to-r from-[#F5A623] to-[#D48C1B] px-4.5 py-3.5 text-white flex items-center justify-between shadow-sm">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/20 flex items-center justify-center relative">
+          <div className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/20 flex items-center justify-center relative shadow-xs">
             <div className="w-6 h-6 flex items-center justify-center">
               <CartoonFace state="neutral" />
             </div>
             {/* Active dot */}
-            <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-green-500 border-2 border-[#F5A623]" />
+            <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2 border-[#F5A623]" />
           </div>
           <div>
-            <h3 className="font-bold text-xs uppercase tracking-wider leading-none">Zwixo Helper</h3>
-            <span className="text-[10px] text-white/80 font-medium">Online • Responds in 2 min</span>
+            <h3 className="font-bold text-xs uppercase tracking-wider leading-none">Gautami • Studio Lead</h3>
+            <span className="text-[10px] text-white/90 font-semibold flex items-center gap-1 mt-0.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              Online Now • Replies in &lt; 2 min
+            </span>
           </div>
         </div>
         <button 
@@ -403,10 +414,32 @@ function ChatWindow({ chatRef, onClose }: ChatWindowProps) {
               <m.div 
                 initial={{ opacity: 0, y: 10, scale: 0.98 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
-                className="flex flex-col items-start"
+                className="flex flex-col items-start space-y-2.5"
               >
                 <div className="px-4 py-2.5 rounded-[18px] rounded-tl-[4px] bg-neutral-100 dark:bg-neutral-900 text-xs text-ink dark:text-neutral-200 max-w-[85%] leading-relaxed">
                   We restore old family photos, design wedding countdowns, baby milestone cards, and product marketing AI reel ads. Select a service to see details and pricing!
+                </div>
+
+                {/* 1-Tap Quick Action Chips */}
+                <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 max-w-full">
+                  <button
+                    onClick={() => handleSelectService("product")}
+                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#F5A623]/10 border border-[#F5A623]/30 text-[#F5A623] text-[10px] font-bold whitespace-nowrap hover:bg-[#F5A623]/20 transition-colors cursor-pointer"
+                  >
+                    🎁 Free Reel Offer
+                  </button>
+                  <button
+                    onClick={() => handleSelectService("restoration")}
+                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-300 text-[10px] font-bold whitespace-nowrap hover:border-[#F5A623] transition-colors cursor-pointer"
+                  >
+                    ⚡ 24h Delivery
+                  </button>
+                  <button
+                    onClick={() => handleSelectService("custom")}
+                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-300 text-[10px] font-bold whitespace-nowrap hover:border-[#F5A623] transition-colors cursor-pointer"
+                  >
+                    🔒 100% Privacy
+                  </button>
                 </div>
               </m.div>
             )}
@@ -450,13 +483,14 @@ function ChatWindow({ chatRef, onClose }: ChatWindowProps) {
           </>
         )}
 
-        {/* VIEW 2: Service Details and Direct Ordering */}
+        {/* VIEW 2: Service Detail & Interactive Package Selection */}
         {view === "detail" && selectedService && (
-          <div className="space-y-3.5">
-            {/* User query bubble mock */}
-            <div className="flex flex-col items-end">
-              <div className="px-4 py-2.5 rounded-[18px] rounded-tr-[4px] bg-[#F5A623] text-white text-xs font-semibold max-w-[85%]">
-                {SERVICE_DETAILS[selectedService].emoji} Tell me about {SERVICE_DETAILS[selectedService].title}
+          <div className="space-y-3">
+            {/* User Choice Pill */}
+            <div className="flex justify-end">
+              <div className="px-4 py-2 rounded-[18px] rounded-tr-[4px] bg-[#F5A623] text-ink font-bold text-xs max-w-[85%] flex items-center gap-2 shadow-xs">
+                <span>{SERVICE_DETAILS[selectedService].emoji}</span>
+                <span>{SERVICE_DETAILS[selectedService].title}</span>
               </div>
             </div>
 
@@ -478,6 +512,9 @@ function ChatWindow({ chatRef, onClose }: ChatWindowProps) {
               >
                 {/* AI Detail Bubble */}
                 <div className="px-4 py-3 rounded-[18px] rounded-tl-[4px] bg-neutral-100 dark:bg-neutral-900 text-xs text-ink dark:text-neutral-200 leading-relaxed space-y-2.5">
+                  <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#F5A623]/15 text-[#F5A623] text-[9px] font-black uppercase tracking-wider">
+                    ✨ Includes FREE AI Reel Video Gift
+                  </div>
                   <p className="font-medium">{SERVICE_DETAILS[selectedService].desc}</p>
                   
                   {/* Interactive Pricing Tiers list */}
