@@ -14,6 +14,9 @@ export interface PricingTier {
   price: string;
   features: string[];
   isPopular?: boolean;
+  badge?: string;
+  savingsText?: string;
+  passType?: "silver" | "gold" | "obsidian";
 }
 
 export interface ServicePricingGroup {
@@ -46,6 +49,8 @@ export interface PricingCardProps {
   tier: PricingTier;
   activePricingLabel: string;
   priceUnit: string;
+  isSelected?: boolean;
+  onSelect?: () => void;
 }
 
 export interface SpringCounterProps {

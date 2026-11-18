@@ -33,7 +33,7 @@ export default function Hero() {
           </div>
 
           {/* Mobile-only Preview Image (shown below 640px) */}
-          <div className="flex sm:hidden w-full max-w-[200px] aspect-[2/3] mx-auto relative rounded-2xl overflow-hidden mb-4 z-10 shadow-lg">
+          <div className="flex sm:hidden w-full max-w-[200px] aspect-[2/3] mx-auto relative rounded-2xl overflow-hidden mb-4 z-10 shadow-none">
             <Image
               src="/images/iphone_orange_mockup.png"
               alt="Zwixo Mobile Preview"

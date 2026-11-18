@@ -36,6 +36,56 @@ export const SHOWCASE_ITEMS: ShowcaseExample[] = [
 
 export const PRICING_GROUPS: ServicePricingGroup[] = [
   {
+    id: "forever-club",
+    label: "Forever Club",
+    emoji: "👑",
+    tiers: [
+      {
+        name: "Silver Pass",
+        price: "₹249",
+        badge: "Entry Pass",
+        passType: "silver",
+        savingsText: "Save ₹500+ vs single orders",
+        features: [
+          "5 Free Occasion Poster Credits",
+          "5% OFF on all paid studio services",
+          "Birthdays, Anniversaries & Festivals",
+          "Full HD WhatsApp & Story (9:16)",
+          "⚡ 24h Express Delivery"
+        ]
+      },
+      {
+        name: "Gold Family Pass",
+        price: "₹499",
+        isPopular: true,
+        badge: "Most Loved Pass",
+        passType: "gold",
+        savingsText: "Save ₹1,450+ vs single orders",
+        features: [
+          "12 Free Occasion Poster Credits",
+          "10% OFF on all paid studio services",
+          "All Personal & Family Occasions",
+          "Priority WhatsApp Support Line",
+          "⚡ 24h Express Priority Delivery"
+        ]
+      },
+      {
+        name: "Obsidian VIP Pass",
+        price: "₹999",
+        badge: "Executive VIP",
+        passType: "obsidian",
+        savingsText: "Save ₹2,750+ vs single orders",
+        features: [
+          "25 Free Occasion Poster Credits",
+          "15% OFF on all paid studio services",
+          "All Family Occasions & Tributes",
+          "VIP Priority Turnaround (<12h)",
+          "Dedicated 1-on-1 Designer Support"
+        ]
+      }
+    ]
+  },
+  {
     id: "wedding-posters",
     label: "Wedding Countdown",
     emoji: "💑",

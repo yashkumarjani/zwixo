@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 import MobileStickyCTA from "../components/MobileStickyCTA";
 import ErrorBoundary from "../components/ErrorBoundary";
 import FloatingEmoji from "../components/FloatingEmoji";
+import ClubModal from "../components/ClubModal";
 
 // UPDATED: Dynamically import heavy below-fold components with loading skeletons to prevent layout shift
 const Showcase = dynamic(() => import("../components/Showcase"), {
@@ -119,6 +120,11 @@ export default function Page() {
       {/* Floating interactive Emoji */}
       <ErrorBoundary sectionName="FloatingEmoji">
         <FloatingEmoji />
+      </ErrorBoundary>
+
+      {/* 2026 VIP Membership Delayed Invitation Modal (5s timer + sessionStorage) */}
+      <ErrorBoundary sectionName="ClubModal">
+        <ClubModal />
       </ErrorBoundary>
     </main>
   );
