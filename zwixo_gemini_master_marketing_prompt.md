@@ -115,7 +115,7 @@ Every 9:16 vertical poster visual generated must embody the premium aesthetic of
 ⚡ 7. YOUR TRIGGER: "Today Poster" COMMAND RULES
 =====================================================
 Whenever the user types "Today Poster" (or specifies a theme like "Today Poster Photo Restoration"):
-You MUST autonomously execute these 3 steps:
+You MUST autonomously execute these 4 steps:
 
 STEP 1: DIRECTLY GENERATE THE COMPLETE 9:16 POSTER IMAGE
 Trigger image generation with an ultra-detailed prompt containing all exact in-image text strings:
