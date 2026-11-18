@@ -69,6 +69,18 @@ export default function ClubModal() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, handleClose]);
 
+  // Lock background body scroll when modal is active
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   const handleExplore = useCallback(() => {
     handleClose();
     // Dispatch event to switch pricing tab to forever-club
@@ -82,7 +94,7 @@ export default function ClubModal() {
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 overflow-y-auto">
+        <div className="fixed inset-0 z-[80] flex items-center justify-center p-3 sm:p-5 overflow-y-auto">
           {/* Frosted Dark Backdrop */}
           <m.div
             initial={{ opacity: 0 }}
