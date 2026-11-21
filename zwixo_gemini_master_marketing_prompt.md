@@ -1,30 +1,29 @@
-# 🚀 ZWIXO — 2026 True Full-Bleed 9:16 Marketing Engine (v15.0)
+# 🚀 ZWIXO — 2026 True Full-Bleed 9:16 Marketing Engine (v16.0)
 
 > **Document Status**: Production Source of Truth for Gemini AI Marketing Campaigns  
 > **Maintained for**: ZWIXO Memory & Business Studio (Ahmedabad, Gujarat)  
-> **Last Updated**: November 19, 2026 | Version: 15.0 (True Full-Bleed 9:16 & Zero-Letterboxing Edition)
+> **Last Updated**: November 21, 2026 | Version: 16.0 (Unified Centered Layout & Atmospheric Dissolve Edition)
 
 ---
 
-## 💡 What's New in Version 15.0 (True 9:16 Canvas Utilization)
+## 💡 What's New in Version 16.0 (Unified Centered Layout, Before/After & Zero Box Look)
 
-1. **"The Margin Word Trap" 100% Deleted:**  
-   Pehle prompt mein "Top Margin" aur "Bottom Margin" likha hua tha, jisse AI film ki tarah kali pattiya (black letterbox bars) paint kar deta tha. Version 15.0 mein se "Margin" word ko poori tarah hata diya gaya hai. Ab background aur lighting **screen ke charo kono tak (top edge se bottom edge tak) 100% seamlessly extend** hogi!
+1. **100% Frozen Centered Brand Architecture (Zero Logo/Footer Drift):**  
+   Pehle prompt me tracks ke beech header aur footer ki wording me halka farak tha, jisse AI kabhi logo left me aur kabhi center me phenk deta tha. Version 16.0 me **Top Header (15%)** aur **Bottom Footer Lockup (70%-85%)** ko word-to-word 100% identical aur strictly horizontally centered lock kar diya gaya hai. Har poster me logo aur CTA button ki position ek hi jagah frozen rahegi!
 
-2. **Front-Loaded 9:16 Aspect Ratio Command:**  
-   Prompt ki pehli line mein hi strictly **`Generate an edge-to-edge full-bleed vertical 9:16 aspect ratio poster (1080x1920 pixels)...`** likha gaya hai taaki Gemini ka backend tool kabhi bhi default square (1:1) image na banaye.
+2. **Photo Restoration Before & After Transformation (Track 1):**  
+   Ab Photo Restoration me bhi clear side-by-side transition hoga: **Left me 1990s ka torn/cracked/faded purana photo** ➔ **Right me golden light line cross karke ultra-sharp Full HD living memory**.
 
-3. **Brand Frame Locked + Content Dynamic:**  
-   - ZWIXO logo seamlessly integrated at 16% height.  
-   - 70%-82% par Hook + Dynamic Subtext + WhatsApp Button + `@ZWIXOSTUDIO`.  
-   - Saffron gold volumetric lighting bleed (Anti-"chipkaya hua" look).
+3. **Atmospheric Feathered Dissolve (Zero "Box/Patch" Cutoff in Wedding & Baby):**  
+   - **Wedding (Track 2)**: Beach scene ko bright daytime sky ki jagah **Romantic Twilight Sunset** me set kiya gaya hai, jisse deep navy paani aur ret naturally poster ke obsidian black background ke sath match kare. Sath me atmospheric sea-mist aur 360° shadow vignette command di gayi hai taaki beach ka scene bina kisi rectangular box ke background me melt ho jaye.
+   - **Baby (Track 4)**: Ivory linen bedding par **360° Light-Pool Radial Shadow Falloff** lagaya gaya hai, jisse bedsheet bahar ki taraf deep charcoal me fade hokar background me 100% seamlessly ghul jati hai (Zero artificial card/sticker/box).
 
 4. **All Verified Business Facts 100% Intact:**  
    - India's 1st on WhatsApp  
    - Live Studio • Ahmedabad, ⭐ 4.9★ Rated · 200+ Reviews  
    - 100% Full HD (Zero 4K over-promising)  
    - 5 Cutting-edge 2026 Visual Concepts  
-   - Persistent Chat Engine & Anti-Repetition Rotation
+   - True Full-Bleed 9:16 (Zero Letterboxing)
 
 ---
 
@@ -99,37 +98,38 @@ No matter how many times the user requests a poster in this chat (Turn 1, Turn 2
    • Eligible Occasions (10): Birthdays, Anniversaries, Engagements, Baby Welcome/Shower, Griha Pravesh, Student Visa Approval/Going Abroad, Exam/Convocation, Retirement/Farewell, Shradhanjali, Punyatithi.
 
 =====================================================
-📐 3. TRUE FULL-BLEED 9:16 CANVAS (ZERO LETTERBOXING)
+📐 3. TRUE FULL-BLEED 9:16 CANVAS (LOCKED 3-ZONE ARCHITECTURE)
 =====================================================
-• Strict Full-Bleed Geometry: Front-load aspect ratio 9:16 (1080x1920). The continuous obsidian dark background, studio shadows, and golden atmospheric lighting must fill 100% of the canvas from the very top edge to the very bottom edge. Strictly zero black framing borders, zero letterboxing bars, and zero pillarboxing.
-• Top Area (15% - 18% Height): ZWIXO brand badge seamlessly integrated with metallic gold rim lighting + "LIVE STUDIO AHMEDABAD · ⭐ 4.9★ (200+ REVIEWS)".
-• Central Hero Visual (20% - 66% Height): Full-bleed 2026 cutting-edge visual stretching naturally across the frame.
-• Typographic Lockup (68% - 82% Height):
-  - Hook Scale: Controlled editorial scale (28pt-32pt proportional, max 6% vertical height, never screaming).
-  - Dynamic Subtext: Clear 1-line process derived from the 3-part formula: [Action] ➔ [Deliverable] ➔ [Price].
-  - Action Button: Prominent glowing saffron-gold pill "WHATSAPP ORDER: +91 8320870517".
-  - Social Proof Micro-Bar: Subtle 60% opacity white with letterspacing: "SEE LIVE WORK: @ZWIXOSTUDIO".
-• Bottom Falloff: Continuous obsidian dark vignette extending seamlessly to the bottom edge.
+• Strict Full-Bleed Geometry: Front-load aspect ratio 9:16 (1080x1920). The continuous obsidian dark background (#0B0B0D), studio shadows, and golden atmospheric lighting must fill 100% of the canvas from the very top edge to the very bottom edge. Strictly zero black framing borders, zero letterboxing bars, and zero pillarboxing.
+• Rigid Horizontal Centering Rule: ALL branding header elements at top, and ALL typography/buttons in the footer lockup MUST be strictly centered along the vertical 9:16 axis. Never left-aligned, never right-aligned. Zero layout shift across all tracks.
+• ZONE 1: TOP BRAND HEADER (14% - 17% Height - 100% Frozen): Geometric golden 'Z' emblem centered directly above 'ZWIXO · LIVE STUDIO AHMEDABAD' with subtle saffron-gold micro-tag centered below: 'INDIA'S 1ST · ⭐ 4.9★ (200+ REVIEWS)'.
+• ZONE 2: CENTRAL HERO VISUAL (20% - 68% Height): Dynamic 2026 visual with Atmospheric Feathered Dissolve: All outer edges, skies, horizons, and floors organically melt into the obsidian dark background through 360-degree radial shadow falloff and atmospheric mist/fog (Strictly zero rectangular box edges, zero cutoff lines).
+• ZONE 3: TYPOGRAPHIC FOOTER LOCKUP (70% - 85% Height - 100% Frozen Alignment):
+  - Hook Scale: Controlled editorial scale (28pt-32pt proportional, centered along vertical axis).
+  - Dynamic Subtext: Clear 1-line process derived from the 3-part formula: [Action] ➔ [Deliverable] ➔ [Price], centered.
+  - Action Button: Prominent glowing saffron-gold pill centered: 'WHATSAPP ORDER: +91 8320870517'.
+  - Social Proof Micro-Bar: Subtle 60% opacity white with letterspacing, centered: 'SEE LIVE WORK: @ZWIXOSTUDIO'.
+• ZONE 4: BOTTOM FALLOFF (86% - 100% Height): Continuous obsidian dark gradient extending seamlessly to the bottom edge.
 
 =====================================================
 🌟 4. CUTTING-EDGE 2026 VISUAL CONCEPTS BY TRACK
 =====================================================
 When rotating on "Today Poster", autonomously cycle through these 5 tracks without repeating:
 
-• TRACK 1 (Photo Restoration): "THE LIVING MEMORY IN HANDS"
-  An authentic human hand gently holding a vintage, yellowed 1970s physical photograph of an Indian grandfather. Where warm golden sunlight touches the aged paper, it physically melts into living, breathing Full HD depth-of-field reality with realistic wrinkles, warm smiling eyes, and floating golden dust between past and present. Pure emotional magic.
+• TRACK 1 (Photo Restoration): "THE RESTORATION SPLIT-REALITY (BEFORE & AFTER)"
+  A dramatic side-by-side split-reality photographic restoration masterpiece: On the left (BEFORE), a severely damaged, faded, cracked, and scratched 1990s physical vintage photograph of an Indian elder with torn corners and water stains. Seamlessly melting across a glowing golden light transition line into the right (AFTER), the photograph physically resurrects into ultra-sharp, photorealistic Full HD lifelike reality—restored natural skin textures, warm smiling eyes, vivid authentic colors, and gentle breath of life. Warm saffron-gold atmospheric dust particles float between past and present, with the outer edges seamlessly feathering and dissolving into the deep obsidian studio background through a 360-degree soft shadow vignette. Zero hard borders, zero cutout appearance, 100% organic emotional realism.
 
-• TRACK 2 (Wedding Countdown): "VOGUE INDIA EDITORIAL CANDID LUXURY"
-  Sabyasachi / Vogue India style intimate candid royal moment: An emotional close-up of a royal Gujarati bride laughing candidly as the groom gently holds her intricate mehndi-adorned hand. Warm amber candlelight illuminates her royal heritage jewelry and velvet lehenga, casting cinematic golden chiaroscuro rim lighting.
+• TRACK 2 (Wedding Countdown): "THE PRE-WEDDING REALITY BURST (DUSK BEACH DISSOLVE)"
+  A breathtaking cinematic transformation of love with seamless atmospheric blending: On the left, a realistic mobile phone displaying a raw, casual everyday snapshot of an Indian couple in normal clothes. Seamlessly expanding and bursting out from the phone into the expansive cinematic frame is the breathtaking 'AFTER' reality—the exact same couple transformed into an ultra-luxury pre-wedding shoot walking hand-in-hand along an intimate dusk twilight ocean beach at sunset. Atmospheric Gradient Integration: The deep navy ocean waves, wet dark sand reflections, and twilight sky organically melt and dissolve into the poster's deep obsidian black (#0B0B0D) canvas through atmospheric sea-mist and a heavy 360-degree soft feathered shadow vignette—strictly zero rectangular framing, zero box edges, zero cutoff lines. Grounding physics: warm golden rim lighting naturally wrapping around their hair and silhouettes, gentle ocean breeze lifting her pastel peach gown, and realistic footprints in glistening dark wet sand. 100% unified photographic depth. (Rotational Themes: Twilight Sunset Beach, Royal Udaipur Palace Courtyard, Misty Mountain Viewpoint).
 
 • TRACK 3 (Product Marketing): "THE PHONE-SCREEN REALITY BURST"
-  An ordinary shopkeeper's hand holding a standard smartphone showing a raw, unedited, dimly lit product photo. But bursting directly out of the phone screen into 3D cinematic space is a sparkling, luxury commercial studio ad of the product with volumetric amber lighting, water droplets, and explosive commercial energy.
+  An ordinary shopkeeper's hand holding a standard smartphone showing a raw, unedited, dimly lit product photo. But bursting directly out of the phone screen into 3D cinematic space is a sparkling, luxury commercial studio ad of the product with volumetric amber lighting, water droplets, and explosive commercial energy, dissolving seamlessly into the obsidian black backdrop.
 
-• TRACK 4 (Baby Milestones): "THE GOLDEN-HOUR MACRO KEEPSAKE"
-  Scandinavian/Japanese minimalist macro portrait: A newborn's tiny baby fingers wrapped around their parent's thumb, bathed in natural morning golden-hour sunlight with organic linen textures. Pure heart-melting warmth and timeless innocence.
+• TRACK 4 (Baby Milestones): "THE HOME-TO-STUDIO BABY BLOOM (LIGHT-POOL BLEND)"
+  An emotionally heart-melting macro transformation with seamless light-pool gradient blending: On the left, a casual handheld smartphone showing a raw, unedited home snapshot of a 1-month-old baby in a standard crib. Seamlessly blossoming out into the expansive frame is the adorable baby resting peacefully on cloud-soft ivory organic linen bedding, illuminated in an intimate, warm pool of morning golden-hour window light. Atmospheric Gradient Integration: The edges of the ivory linen bedding organically darken and dissolve into the poster's deep obsidian charcoal background through a smooth, 360-degree feathered radial shadow falloff—zero artificial cards, zero framing boxes, zero visible borders. Soft natural light wraps around the baby's delicate eyelashes, curled fingers, and rosy cheeks with creamy f/1.8 optical depth-of-field blur. Microscopic fabric weaves and authentic contact shadows ground the baby 100% into the environment with zero pasted-on appearance.
 
 • TRACK 5 (Forever Moments Club): "THE OBSIDIAN FAMILY VAULT"
-  An ultra-luxurious open matte obsidian black and gold-foil heirloom memory box, with golden light and miniature family celebration moments (birthdays, anniversaries) glowing outward like liquid gold, paired with a sleek metallic VIP pass.
+  An ultra-luxurious open matte obsidian black and gold-foil heirloom memory box, with golden light and miniature family celebration moments (birthdays, anniversaries) glowing outward like liquid gold, paired with a sleek metallic VIP pass, melting naturally into the obsidian black void.
 
 =====================================================
 🔒 5. THE IMMUTABLE FROZEN PROMPT SKELETON (MANDATORY)
@@ -138,19 +138,19 @@ For EVERY image generation turn, you MUST pass this EXACT, FULL-LENGTH prompt to
 
 Generate an edge-to-edge full-bleed vertical 9:16 aspect ratio luxury social media advertising poster (1080x1920 pixels) for 'ZWIXO Memory Studio'. Zero letterboxing, zero pillarboxing, zero outer framing borders. The continuous deep obsidian black (#0B0B0D) cinematic studio background and warm saffron gold (#F5A623) volumetric rim lighting seamlessly fill 100% of the entire 9:16 canvas from the very top edge to the very bottom edge.
 
-AT 16% HEIGHT (TOP BRAND MARK - NEVER OMIT):
-A minimalist luxury brand header centered, subtly embossed with metallic gold edge reflection: Geometric golden 'Z' emblem with sharp typography reading 'ZWIXO · LIVE STUDIO AHMEDABAD' and subtle gold tag 'INDIA'S 1ST · ⭐ 4.9★ (200+ REVIEWS)'.
+AT 15% HEIGHT (LOCKED BRAND HEADER - STRICTLY HORIZONTALLY CENTERED):
+A minimalist luxury brand header perfectly horizontally centered along the vertical 9:16 axis (never left-aligned, never right-aligned): Geometric golden 'Z' emblem centered directly above sharp high-contrast typography reading 'ZWIXO · LIVE STUDIO AHMEDABAD' with subtle saffron-gold micro-tag centered directly below 'INDIA'S 1ST · ⭐ 4.9★ (200+ REVIEWS)'. Zero layout shift, 100% frozen brand alignment across all poster tracks.
 
-IN THE CENTER (20%-66% HEIGHT - HERO VISUAL):
+IN THE CENTER (20%-68% HEIGHT - HERO VISUAL & ATMOSPHERIC DISSOLVE):
 [INSERT DETAILED HERO VISUAL CONCEPT FROM ACTIVE TRACK]
-Unified 35mm cinematic grain and Hasselblad color grade binding the entire image into a single organic reality with zero pasted-on appearance.
+Atmospheric gradient rule: The outer perimeter, horizon, and floor of the visual seamlessly feather and melt into the deep obsidian studio background through a 360-degree soft shadow vignette and atmospheric haze. Strictly zero rectangular box edges, zero cutoff lines. Unified 35mm cinematic grain and Hasselblad color grade binding the entire image into a single organic reality with zero pasted-on appearance.
 
-AT 68%-82% HEIGHT (SEAMLESS TYPOGRAPHIC LOCKUP - CONTROLLED SCALE):
-Clean, high-contrast typography emerging naturally from the dark obsidian shadow vignette, with subtle golden rim lighting kissing the letterforms:
-'[INSERT GUJARATI HOOK - CONTROLLED 28PT SCALE]'
-'[INSERT DYNAMIC SUBTEXT USING 3-PART FORMULA: ACTION ➔ DELIVERABLE ➔ PRICE]'
-'WHATSAPP ORDER: +91 8320870517'
-'SEE LIVE WORK: @ZWIXOSTUDIO'
+AT 70%-85% HEIGHT (LOCKED TYPOGRAPHIC FOOTER - STRICTLY HORIZONTALLY CENTERED):
+All typography and action buttons strictly centered along the vertical 9:16 axis emerging naturally from the dark obsidian shadow vignette, with subtle golden rim lighting kissing the letterforms:
+'[INSERT GUJARATI HOOK - CONTROLLED 28PT SCALE - CENTERED]'
+'[INSERT DYNAMIC SUBTEXT USING 3-PART FORMULA: ACTION ➔ DELIVERABLE ➔ PRICE - CENTERED]'
+A glowing saffron-gold pill button perfectly centered: 'WHATSAPP ORDER: +91 8320870517'
+A subtle 60% opacity white micro-tag centered directly below: 'SEE LIVE WORK: @ZWIXOSTUDIO'
 
 The background shadow gradient seamlessly extends all the way to the 100% bottom edge with zero cutoff. Hasselblad medium format photography style, 8k resolution, Apple-style advertising campaign.
 
@@ -209,102 +209,111 @@ Confirm your understanding of True Full-Bleed 9:16 Geometry, Zero-Letterboxing R
 
 ## 🎨 5 Tested 2026 True Full-Bleed Prompts (Ready to Copy-Paste)
 
-### 1. Photo Restoration ("The Living Memory in Hands")
+### 1. Photo Restoration ("The Restoration Split-Reality Before & After")
 ```text
 Generate an edge-to-edge full-bleed vertical 9:16 aspect ratio luxury social media advertising poster (1080x1920 pixels) for 'ZWIXO Memory Studio'. Zero letterboxing, zero pillarboxing, zero outer framing borders. The continuous deep obsidian black (#0B0B0D) cinematic studio background and warm saffron gold (#F5A623) volumetric rim lighting seamlessly fill 100% of the entire 9:16 canvas from the very top edge to the very bottom edge.
 
-AT 16% HEIGHT (TOP BRAND MARK):
-A minimalist luxury brand header centered, subtly embossed with metallic gold edge reflection: Geometric golden 'Z' emblem with sharp typography reading 'ZWIXO · LIVE STUDIO AHMEDABAD' and subtle gold tag 'INDIA'S 1ST · ⭐ 4.9★ (200+ REVIEWS)'.
+AT 15% HEIGHT (LOCKED BRAND HEADER - STRICTLY HORIZONTALLY CENTERED):
+A minimalist luxury brand header perfectly horizontally centered along the vertical 9:16 axis (never left-aligned, never right-aligned): Geometric golden 'Z' emblem centered directly above sharp high-contrast typography reading 'ZWIXO · LIVE STUDIO AHMEDABAD' with subtle saffron-gold micro-tag centered directly below 'INDIA'S 1ST · ⭐ 4.9★ (200+ REVIEWS)'. Zero layout shift, 100% frozen brand alignment.
 
-IN THE CENTER (20%-66% HEIGHT - THE LIVING MEMORY IN HANDS):
-An emotionally gripping, hyper-realistic cinematic masterpiece: An authentic human hand gently holding a vintage, yellowed 1970s physical photograph of an Indian grandfather. Right where warm saffron-gold sunlight touches the aged paper, the photograph physically dissolves and transcends into ultra-sharp, photorealistic Full HD lifelike reality—the grandfather's eyes warm with gentle tears of joy and loving smile, with soft golden atmospheric dust floating between the past and present. Unified 35mm cinematic grain and Hasselblad color grade binding the entire image into a single organic reality with zero pasted-on appearance.
+IN THE CENTER (20%-68% HEIGHT - RESTORATION SPLIT-REALITY BEFORE & AFTER):
+A dramatic side-by-side split-reality photographic restoration masterpiece: 
+On the left (BEFORE), a severely damaged, faded, cracked, and scratched 1990s physical vintage photograph of an Indian grandfather with torn corners and water stains. 
+Seamlessly melting across a glowing golden light transition line into the right (AFTER), the photograph physically resurrects into ultra-sharp, photorealistic Full HD lifelike reality—restored natural skin textures, warm smiling eyes, vivid authentic colors, and gentle breath of life. 
+Atmospheric Gradient Integration: Warm saffron-gold atmospheric dust particles float between past and present, with the outer edges seamlessly feathering and dissolving into the deep obsidian studio background through a 360-degree soft shadow vignette. Strictly zero hard borders, zero rectangular cutout lines, 100% organic emotional realism with unified 35mm Hasselblad film grain.
 
-AT 68%-82% HEIGHT (SEAMLESS TYPOGRAPHIC LOCKUP - CONTROLLED 28PT SCALE):
-Clean, high-contrast typography emerging naturally from the dark obsidian shadow vignette, with subtle golden rim lighting kissing the letterforms:
+AT 70%-85% HEIGHT (LOCKED TYPOGRAPHIC FOOTER - STRICTLY HORIZONTALLY CENTERED):
+All typography and action buttons strictly centered along the vertical 9:16 axis emerging naturally from the dark obsidian shadow vignette, with subtle golden rim lighting kissing the letterforms:
 'જે ચહેરો તમે વર્ષોથી યાદ કરો છો… એ ફોટો હજી કબાટમાં છે?'
-'કોઈપણ જૂનો ફોટો મોકલો → 24 કલાકમાં Full HD ફોટો + બોલતો-હસતો AI વિડીયો તૈયાર · Starting ₹499 (પહેલાં પ્રીવ્યૂ જુઓ)'
-'WHATSAPP ORDER: +91 8320870517'
-'SEE LIVE WORK: @ZWIXOSTUDIO'
+'ખરાબ કે જૂનો ફોટો મોકલો → 24 કલાકમાં Full HD રિસ્ટોરેશન + બોલતો-હસતો AI વિડીયો તૈયાર · Starting ₹499 (પહેલાં પ્રીવ્યૂ જુઓ)'
+A glowing saffron-gold pill button perfectly centered: 'WHATSAPP ORDER: +91 8320870517'
+A subtle 60% opacity white micro-tag centered directly below: 'SEE LIVE WORK: @ZWIXOSTUDIO'
 
 The background shadow gradient seamlessly extends all the way to the 100% bottom edge with zero cutoff. Hasselblad medium format photography style, 8k resolution, Apple-style advertising campaign.
 ```
 
-### 2. Wedding Countdown ("Vogue India Editorial Candid Luxury")
+### 2. Wedding Countdown ("The Pre-Wedding Reality Burst - Dusk Beach Dissolve")
 ```text
-Generate an edge-to-edge full-bleed vertical 9:16 aspect ratio luxury social media advertising poster (1080x1920 pixels) for 'ZWIXO Celebration Studio'. Zero letterboxing, zero pillarboxing, zero outer framing borders. The continuous deep midnight charcoal background and warm saffron gold (#F5A623) volumetric candlelight seamlessly fill 100% of the entire 9:16 canvas from the very top edge to the very bottom edge.
+Generate an edge-to-edge full-bleed vertical 9:16 aspect ratio luxury social media advertising poster (1080x1920 pixels) for 'ZWIXO Celebration Studio'. Zero letterboxing, zero pillarboxing, zero outer framing borders. The continuous deep obsidian black (#0B0B0D) cinematic studio background and warm saffron gold (#F5A623) volumetric rim lighting seamlessly fill 100% of the entire 9:16 canvas from the very top edge to the very bottom edge.
 
-AT 16% HEIGHT (TOP BRAND MARK):
-Sleek gold brand mark reading 'ZWIXO · LIVE STUDIO AHMEDABAD' with subtitle 'INDIA'S 1ST · ⭐ 4.9★ (200+ REVIEWS)'.
+AT 15% HEIGHT (LOCKED BRAND HEADER - STRICTLY HORIZONTALLY CENTERED):
+A minimalist luxury brand header perfectly horizontally centered along the vertical 9:16 axis (never left-aligned, never right-aligned): Geometric golden 'Z' emblem centered directly above sharp high-contrast typography reading 'ZWIXO · LIVE STUDIO AHMEDABAD' with subtle saffron-gold micro-tag centered directly below 'INDIA'S 1ST · ⭐ 4.9★ (200+ REVIEWS)'. Zero layout shift, 100% frozen brand alignment.
 
-IN THE CENTER (20%-66% HEIGHT - VOGUE CANDID LUXURY):
-A Sabyasachi / Vogue India editorial candid luxury moment: An intimate, emotionally charged close-up of a royal Gujarati bride laughing candidly as the groom gently holds her intricate mehndi-adorned hand. Warm amber candlelight illuminates her royal heritage jewelry and velvet lehenga, casting cinematic golden chiaroscuro rim lighting. Unified 35mm fine grain and luxury editorial tone.
+IN THE CENTER (20%-68% HEIGHT - PRE-WEDDING REALITY BURST WITH ATMOSPHERIC DISSOLVE):
+A breathtaking cinematic transformation of love with seamless atmospheric blending: 
+On the left, a realistic mobile phone displaying a raw, casual everyday snapshot of an Indian couple in normal clothes with phone screen glare. 
+Seamlessly expanding and bursting out from the phone into the expansive cinematic frame is the breathtaking 'AFTER' reality—the exact same couple transformed into an ultra-luxury pre-wedding shoot walking hand-in-hand along an intimate dusk twilight ocean beach at sunset. 
+Atmospheric Gradient Integration: The deep navy ocean waves, wet dark sand reflections, and twilight sky organically melt and dissolve into the poster's deep obsidian black canvas through atmospheric sea-mist and a heavy 360-degree soft feathered shadow vignette—strictly zero rectangular framing, zero box edges, zero cutoff lines. Grounding physics: warm golden rim lighting naturally wrapping around their hair and silhouettes, gentle ocean breeze lifting her pastel peach gown, and realistic footprints in glistening dark wet sand. 100% unified photographic depth.
 
-AT 68%-82% HEIGHT (SEAMLESS TYPOGRAPHIC LOCKUP - CONTROLLED 28PT SCALE):
-Clean typography emerging naturally from the shadow:
+AT 70%-85% HEIGHT (LOCKED TYPOGRAPHIC FOOTER - STRICTLY HORIZONTALLY CENTERED):
+All typography and action buttons strictly centered along the vertical 9:16 axis emerging naturally from the dark obsidian shadow vignette, with subtle golden rim lighting kissing the letterforms:
 'તમારા લગ્નનું કાઉન્ટડાઉન સામાન્ય કેમ હોય?'
-'સામાન્ય ફોટા મોકલો → તમારી મનપસંદ રોયલ થીમ પર ડેઇલી કાઉન્ટડાઉન પોસ્ટર્સ તૈયાર (Starting ₹2,499)'
-'WHATSAPP ORDER: +91 8320870517'
-'SEE LIVE WORK: @ZWIXOSTUDIO'
+'સામાન્ય ફોટા મોકલો → બીચ કે રોયલ પેલેસ થીમ પર લક્ઝરી પ્રી-વેડિંગ કાઉન્ટડાઉન પોસ્ટર્સ તૈયાર (Starting ₹2,499)'
+A glowing saffron-gold pill button perfectly centered: 'WHATSAPP ORDER: +91 8320870517'
+A subtle 60% opacity white micro-tag centered directly below: 'SEE LIVE WORK: @ZWIXOSTUDIO'
 
-The background shadow gradient seamlessly extends all the way to the 100% bottom edge with zero cutoff. Minimalist 2026 luxury aesthetic, sharp typography, 8k render.
+The background shadow gradient seamlessly extends all the way to the 100% bottom edge with zero cutoff. Minimalist 2026 luxury aesthetic, sharp typography, Hasselblad medium format photography style.
 ```
 
 ### 3. Product Marketing ("The Phone-Screen Reality Burst")
 ```text
-Generate an edge-to-edge full-bleed vertical 9:16 aspect ratio commercial advertising poster (1080x1920 pixels) for 'ZWIXO Studio'. Zero letterboxing, zero pillarboxing, zero outer borders. The continuous deep obsidian dark background and dynamic golden spotlighting seamlessly fill 100% of the entire 9:16 canvas from the very top edge to the very bottom edge.
+Generate an edge-to-edge full-bleed vertical 9:16 aspect ratio commercial advertising poster (1080x1920 pixels) for 'ZWIXO Studio'. Zero letterboxing, zero pillarboxing, zero outer framing borders. The continuous deep obsidian black (#0B0B0D) cinematic studio background and dynamic golden spotlighting seamlessly fill 100% of the entire 9:16 canvas from the very top edge to the very bottom edge.
 
-AT 16% HEIGHT (TOP BRAND MARK):
-Executive gold emblem reading 'ZWIXO · LIVE STUDIO AHMEDABAD' with subtitle 'INDIA'S 1ST · ⭐ 4.9★ (200+ BUSINESSES)'.
+AT 15% HEIGHT (LOCKED BRAND HEADER - STRICTLY HORIZONTALLY CENTERED):
+A minimalist luxury brand header perfectly horizontally centered along the vertical 9:16 axis (never left-aligned, never right-aligned): Geometric golden 'Z' emblem centered directly above sharp high-contrast typography reading 'ZWIXO · LIVE STUDIO AHMEDABAD' with subtle saffron-gold micro-tag centered directly below 'INDIA'S 1ST · ⭐ 4.9★ (200+ REVIEWS)'. Zero layout shift, 100% frozen brand alignment.
 
-IN THE CENTER (20%-66% HEIGHT - THE REALITY BURST):
-An ordinary shopkeeper's hand holding a standard smartphone showing a raw, unedited, dimly lit product photo. But bursting directly out of the phone screen into 3D cinematic space is a sparkling, luxury commercial studio ad of the product with volumetric amber lighting, water droplets, and explosive commercial energy.
+IN THE CENTER (20%-68% HEIGHT - THE REALITY BURST WITH ATMOSPHERIC BLEND):
+An ordinary shopkeeper's hand holding a standard smartphone showing a raw, unedited, dimly lit product photo. Bursting directly out of the phone screen into 3D cinematic space is a sparkling, luxury commercial studio ad of the product with volumetric amber lighting, water droplets, and explosive commercial energy, dissolving organically into the obsidian black backdrop through 360-degree soft feathered shadow falloff.
 
-AT 68%-82% HEIGHT (SEAMLESS TYPOGRAPHIC LOCKUP - CONTROLLED 28PT SCALE):
-Bold high-contrast typography naturally integrated into the dark vignette:
+AT 70%-85% HEIGHT (LOCKED TYPOGRAPHIC FOOTER - STRICTLY HORIZONTALLY CENTERED):
+All typography and action buttons strictly centered along the vertical 9:16 axis emerging naturally from the dark obsidian shadow vignette, with subtle golden rim lighting kissing the letterforms:
 'તમારા પ્રોડક્ટ્સ શાનદાર છે... પણ જાહેરાત સામાન્ય કેમ?'
 'ફોનનો સાદો પ્રોડક્ટ ફોટો મોકલો → 24 કલાકમાં કમર્શિયલ એડ પોસ્ટર્સ + AI વિડીયો તૈયાર (Starting ₹1,999)'
-'WHATSAPP ORDER: +91 8320870517'
-'SEE LIVE WORK: @ZWIXOSTUDIO'
+A glowing saffron-gold pill button perfectly centered: 'WHATSAPP ORDER: +91 8320870517'
+A subtle 60% opacity white micro-tag centered directly below: 'SEE LIVE WORK: @ZWIXOSTUDIO'
 
-The background shadow gradient seamlessly extends all the way to the 100% bottom edge with zero cutoff. Ultra-sharp typography, commercial studio lighting.
+The background shadow gradient seamlessly extends all the way to the 100% bottom edge with zero cutoff. Ultra-sharp typography, commercial studio lighting, Hasselblad medium format style.
 ```
 
-### 4. Baby Milestones ("The Golden-Hour Macro Keepsake")
+### 4. Baby Milestones ("The Home-to-Studio Baby Bloom - Light-Pool Blend")
 ```text
-Generate an edge-to-edge full-bleed vertical 9:16 aspect ratio milestone keepsake poster (1080x1920 pixels) for 'ZWIXO Studio'. Zero letterboxing, zero pillarboxing, zero outer borders. The continuous soft warm charcoal background and subtle champagne gold glow seamlessly fill 100% of the entire 9:16 canvas from the very top edge to the very bottom edge.
+Generate an edge-to-edge full-bleed vertical 9:16 aspect ratio milestone keepsake poster (1080x1920 pixels) for 'ZWIXO Studio'. Zero letterboxing, zero pillarboxing, zero outer framing borders. The continuous deep obsidian black (#0B0B0D) cinematic studio background and subtle champagne gold glow seamlessly fill 100% of the entire 9:16 canvas from the very top edge to the very bottom edge.
 
-AT 16% HEIGHT (TOP BRAND MARK):
-Elegant gold brand emblem reading 'ZWIXO · LIVE STUDIO AHMEDABAD' with subtitle 'INDIA'S 1ST · ⭐ 4.9★ (200+ FAMILIES)'.
+AT 15% HEIGHT (LOCKED BRAND HEADER - STRICTLY HORIZONTALLY CENTERED):
+A minimalist luxury brand header perfectly horizontally centered along the vertical 9:16 axis (never left-aligned, never right-aligned): Geometric golden 'Z' emblem centered directly above sharp high-contrast typography reading 'ZWIXO · LIVE STUDIO AHMEDABAD' with subtle saffron-gold micro-tag centered directly below 'INDIA'S 1ST · ⭐ 4.9★ (200+ REVIEWS)'. Zero layout shift, 100% frozen brand alignment.
 
-IN THE CENTER (20%-66% HEIGHT - GOLDEN-HOUR MACRO):
-A Scandinavian/Japanese minimalist macro portrait: A newborn's tiny baby fingers wrapped around their parent's thumb, bathed in natural morning golden-hour sunlight with organic linen textures. Pure heart-melting warmth and timeless innocence.
+IN THE CENTER (20%-68% HEIGHT - HOME-TO-STUDIO BABY BLOOM WITH LIGHT-POOL BLEND):
+An emotionally heart-melting macro transformation with seamless light-pool gradient blending: 
+On the left, a casual handheld smartphone showing a raw, unedited home snapshot of a 1-month-old baby in a standard cot. 
+Seamlessly blossoming out into the expansive frame is the adorable baby resting peacefully on cloud-soft ivory organic linen bedding, illuminated in an intimate, warm pool of morning golden-hour window light. 
+Atmospheric Gradient Integration: The edges of the ivory linen bedding organically darken and dissolve into the poster's deep obsidian charcoal background through a smooth, 360-degree feathered radial shadow falloff—strictly zero artificial cards, zero framing boxes, zero visible borders. Soft natural light wraps around the baby's delicate eyelashes, curled fingers, and rosy cheeks with creamy f/1.8 optical depth-of-field blur. Microscopic fabric weaves and authentic contact shadows ground the baby 100% into the environment with zero pasted-on appearance.
 
-AT 68%-82% HEIGHT (SEAMLESS TYPOGRAPHIC LOCKUP - CONTROLLED 28PT SCALE):
-Crisp modern typography naturally integrated into the soft dark gradient:
+AT 70%-85% HEIGHT (LOCKED TYPOGRAPHIC FOOTER - STRICTLY HORIZONTALLY CENTERED):
+All typography and action buttons strictly centered along the vertical 9:16 axis emerging naturally from the dark obsidian shadow vignette, with subtle golden rim lighting kissing the letterforms:
 'બાળકના આ ખાસ દિવસો ફરી ક્યારેય પાછા નહીં આવે...'
-'ઘરના કૅન્ડિડ ફોટા મોકલો → બાળકના દરેક મહિનાના લક્ઝરી માઇલસ્ટોન કાર્ડ્સ તૈયાર (Starting ₹1,299)'
-'WHATSAPP ORDER: +91 8320870517'
-'SEE LIVE WORK: @ZWIXOSTUDIO'
+'ઘરના સાદા ફોટા મોકલો → 1 Month થી 1st Birthday સુધીના લક્ઝરી બેબી માઇલસ્ટોન પોસ્ટર્સ તૈયાર (Starting ₹1,299)'
+A glowing saffron-gold pill button perfectly centered: 'WHATSAPP ORDER: +91 8320870517'
+A subtle 60% opacity white micro-tag centered directly below: 'SEE LIVE WORK: @ZWIXOSTUDIO'
 
-The background shadow gradient seamlessly extends all the way to the 100% bottom edge with zero cutoff. Clean 2026 minimalist style, 8k render.
+The background shadow gradient seamlessly extends all the way to the 100% bottom edge with zero cutoff. Clean 2026 minimalist style, Hasselblad medium format photography, 8k render.
 ```
 
 ### 5. Forever Moments Club ("The Obsidian Family Vault")
 ```text
-Generate an edge-to-edge full-bleed vertical 9:16 aspect ratio VIP membership advertising poster (1080x1920 pixels) for 'ZWIXO FOREVER CLUB'. Zero letterboxing, zero pillarboxing, zero outer borders. The continuous deep obsidian matte black background and dramatic golden halo lighting seamlessly fill 100% of the entire 9:16 canvas from the very top edge to the very bottom edge.
+Generate an edge-to-edge full-bleed vertical 9:16 aspect ratio VIP membership advertising poster (1080x1920 pixels) for 'ZWIXO Forever Club'. Zero letterboxing, zero pillarboxing, zero outer framing borders. The continuous deep obsidian matte black (#0B0B0D) background and dramatic golden halo lighting seamlessly fill 100% of the entire 9:16 canvas from the very top edge to the very bottom edge.
 
-AT 16% HEIGHT (TOP BRAND MARK):
-Regal crown star emblem reading 'ZWIXO FOREVER CLUB' with subtitle 'INDIA'S 1ST · 👑 ANNUAL VIP PASS'.
+AT 15% HEIGHT (LOCKED BRAND HEADER - STRICTLY HORIZONTALLY CENTERED):
+A minimalist luxury brand header perfectly horizontally centered along the vertical 9:16 axis (never left-aligned, never right-aligned): Geometric golden 'Z' emblem centered directly above sharp high-contrast typography reading 'ZWIXO · LIVE STUDIO AHMEDABAD' with subtle saffron-gold micro-tag centered directly below 'INDIA'S 1ST · ⭐ 4.9★ (200+ REVIEWS)'. Zero layout shift, 100% frozen brand alignment.
 
-IN THE CENTER (20%-66% HEIGHT - THE FAMILY VAULT):
-An ultra-luxurious open matte obsidian black and gold-foil heirloom memory box, with golden light and miniature family celebration moments (birthdays, anniversaries) glowing outward like liquid gold, paired with a sleek metallic VIP pass.
+IN THE CENTER (20%-68% HEIGHT - THE FAMILY VAULT WITH GRADIENT BLEND):
+An ultra-luxurious open matte obsidian black and gold-foil heirloom memory box, with golden light and miniature family celebration moments (birthdays, anniversaries) glowing outward like liquid gold, paired with a sleek metallic VIP pass, melting organically into the obsidian black void through soft 360-degree feathered shadow falloff.
 
-AT 68%-82% HEIGHT (SEAMLESS TYPOGRAPHIC LOCKUP - CONTROLLED 28PT SCALE):
-Crisp typography naturally integrated into the dark vignette:
+AT 70%-85% HEIGHT (LOCKED TYPOGRAPHIC FOOTER - STRICTLY HORIZONTALLY CENTERED):
+All typography and action buttons strictly centered along the vertical 9:16 axis emerging naturally from the dark obsidian shadow vignette, with subtle golden rim lighting kissing the letterforms:
 'પરિવારના દરેક નાના-મોટા પ્રસંગ માટે એક જ ખાસ પાસ'
 'વાર્ષિક પાસ લો → આખા વર્ષના પ્રસંગ પોસ્ટર્સ ફ્રી + તમામ સર્વિસિસ પર ડિસ્કાઉન્ટ (Annual Pass From ₹249)'
-'WHATSAPP ORDER: +91 8320870517'
-'SEE LIVE WORK: @ZWIXOSTUDIO'
+A glowing saffron-gold pill button perfectly centered: 'WHATSAPP ORDER: +91 8320870517'
+A subtle 60% opacity white micro-tag centered directly below: 'SEE LIVE WORK: @ZWIXOSTUDIO'
 
 The background shadow gradient seamlessly extends all the way to the 100% bottom edge with zero cutoff. Minimalist luxury fintech aesthetic, CRED-style 3D render.
 ```
