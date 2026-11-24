@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  title: "ZWIXO | WhatsApp-First Memory & Business Studio",
-  description: "ZWIXO is India's premier WhatsApp-first Memory & Business Studio. Photo Restorations, Wedding Countdowns, Baby Milestones & Product Marketing Posters + FREE AI Video Reels. Express 24h WhatsApp delivery.",
+  title: "ZWIXO | WhatsApp-First Memory & Business Studio (Starts ₹249)",
+  description: "ZWIXO: India's premier WhatsApp-first studio. Photo Restorations (+ FREE AI Video), Wedding Countdowns, Baby Milestones, Product Marketing & Forever Moments Club. Express 24h WhatsApp delivery. Rated 4.9★ by 200+ clients.",
   keywords: [
     "ZWIXO", 
     "Zwixo", 
@@ -28,7 +28,9 @@ export const metadata: Metadata = {
     "Zwixo Studio", 
     "ZWIXO Photo Restoration", 
     "Zwixo Countdown", 
-    "photo restoration", 
+    "Forever Moments Club",
+    "VIP memory pass",
+    "photo restoration Ahmedabad", 
     "wedding countdown posters", 
     "baby milestone cards", 
     "product marketing posters",
@@ -38,14 +40,21 @@ export const metadata: Metadata = {
     "creative edit", 
     "Ahmedabad studio"
   ],
-  authors: [{ name: "Gautami" }],
+  authors: [{ name: "Gautami", url: "https://zwixo-memory-studio.netlify.app" }],
+  creator: "Gautami",
+  publisher: "ZWIXO",
+  formatDetection: {
+    email: false,
+    address: true,
+    telephone: true,
+  },
   icons: {
     icon: "/icon.svg",
     apple: "/icon.svg",
   },
   openGraph: {
-    title: "ZWIXO | Memory & Business Studio 🚀",
-    description: "India's premier WhatsApp-first studio. Photo Restorations, Wedding Countdowns, Baby Milestones & Product Marketing Posters + FREE AI Video Reels. Express 24h WhatsApp delivery!",
+    title: "ZWIXO | WhatsApp-First Memory & Business Studio 🚀",
+    description: "Photo Restorations (₹499) + FREE AI Video, Wedding Countdowns (₹2,499), Baby Milestones (₹1,299), Product Ads (₹1,999) & Forever Moments Club (₹249). Rated 4.9★ (200+ Reviews). Express 24h WhatsApp Delivery!",
     url: "https://zwixo-memory-studio.netlify.app",
     siteName: "ZWIXO",
     locale: "en_IN",
@@ -53,16 +62,20 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://zwixo-memory-studio.netlify.app/images/logo_preview.png",
+        secureUrl: "https://zwixo-memory-studio.netlify.app/images/logo_preview.png",
         width: 1200,
         height: 630,
-        alt: "ZWIXO Memory & Business Studio Preview",
+        type: "image/png",
+        alt: "ZWIXO Memory & Business Studio - Express WhatsApp Delivery",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ZWIXO | Memory & Business Studio 🚀",
-    description: "India's premier WhatsApp-first studio. Photo Restorations, Wedding Countdowns, Baby Milestones & Product Marketing Posters + FREE AI Video Reels. Express 24h WhatsApp delivery!",
+    title: "ZWIXO | Memory & Business Studio 🚀 (Starts ₹249)",
+    description: "Photo Restorations, Wedding Countdowns, Baby Milestones, Product Marketing & Forever Moments Club + FREE AI Video Reels. 4.9★ Rated. Express WhatsApp Delivery!",
+    site: "@zwixostudio",
+    creator: "@zwixostudio",
     images: ["https://zwixo-memory-studio.netlify.app/images/logo_preview.png"],
   },
   verification: {
@@ -83,8 +96,8 @@ const jsonLd = {
       "@id": "https://zwixo-memory-studio.netlify.app/#website",
       "url": "https://zwixo-memory-studio.netlify.app",
       "name": "ZWIXO",
-      "alternateName": ["Zwixo", "ZWIXO Memory Studio", "Zwixo Studio"],
-      "description": "ZWIXO is India's premium WhatsApp-first Memory & Celebration Studio.",
+      "alternateName": ["Zwixo", "ZWIXO Memory Studio", "Zwixo Studio", "ZWIXO Memory & Business Studio"],
+      "description": "ZWIXO is India's premium WhatsApp-first Memory, Celebration & Business Studio.",
       "publisher": {
         "@id": "https://zwixo-memory-studio.netlify.app/#organization"
       }
@@ -92,11 +105,13 @@ const jsonLd = {
     {
       "@type": "ProfessionalService",
       "@id": "https://zwixo-memory-studio.netlify.app/#organization",
-      "name": "ZWIXO",
+      "name": "ZWIXO Memory & Business Studio",
       "image": "https://zwixo-memory-studio.netlify.app/images/logo_preview.png",
       "url": "https://zwixo-memory-studio.netlify.app",
       "telephone": "+918320870517",
-      "priceRange": "₹₹",
+      "priceRange": "₹249 - ₹5,999",
+      "currenciesAccepted": "INR",
+      "paymentAccepted": "UPI, Credit Card, Debit Card, Net Banking",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Satellite",
@@ -109,6 +124,28 @@ const jsonLd = {
         "@type": "GeoCoordinates",
         "latitude": 23.0305,
         "longitude": 72.5076
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ahmedabad"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Gautami",
+        "jobTitle": "Lead Creative Artist & Founder"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "200",
+        "bestRating": "5",
+        "worstRating": "1"
       },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
@@ -125,8 +162,60 @@ const jsonLd = {
         "closes": "21:00"
       },
       "sameAs": [
-        "https://wa.me/918320870517"
-      ]
+        "https://wa.me/918320870517",
+        "https://www.instagram.com/zwixostudio"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "ZWIXO Creative Services & Membership",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Forever Moments Club (Annual VIP Pass)",
+            "description": "Unlock VIP pricing, priority 24h WhatsApp turnaround, 1 Free Photo Restoration, and year-round discounts on memory & business posters.",
+            "price": "249",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://zwixo-memory-studio.netlify.app"
+          },
+          {
+            "@type": "Offer",
+            "name": "Photo Restoration (+ FREE AI Video Reel)",
+            "description": "Restore vintage, torn, faded, or blurry family photographs into Full HD 300 DPI masterpieces + complimentary AI motion video reel.",
+            "price": "499",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://zwixo-memory-studio.netlify.app"
+          },
+          {
+            "@type": "Offer",
+            "name": "Baby Milestone Keepsake Cards",
+            "description": "Artisan monthly milestone keepsake posters capturing baby first steps, smiles, and monthly themes with personalized story elements.",
+            "price": "1299",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://zwixo-memory-studio.netlify.app"
+          },
+          {
+            "@type": "Offer",
+            "name": "Product Marketing Posters & AI Video Ads",
+            "description": "Commercial-grade D2C and local business product banners + 9:16 vertical AI promotional reels engineered for Instagram and WhatsApp ads.",
+            "price": "1999",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://zwixo-memory-studio.netlify.app"
+          },
+          {
+            "@type": "Offer",
+            "name": "Wedding Countdown & Save the Date Posters",
+            "description": "Cinematic royal wedding countdowns, digital invites, and save-the-date posters crafted for WhatsApp status and luxury printing.",
+            "price": "2499",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://zwixo-memory-studio.netlify.app"
+          }
+        ]
+      }
     }
   ]
 };
